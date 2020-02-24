@@ -18,7 +18,7 @@ def main(argv = None):
     usage = "usage: %prog [options]\n Script to submit Analyzer jobs to batch"
 
     parser = OptionParser(usage)
-    parser.add_option("-f","--files",default="1",help="number of files per job [default: %default]")
+    parser.add_option("-f","--files",default="2",help="number of files per job [default: %default]")
     parser.add_option("-x","--xml",default="samples.xml",help="input xml configuration [default: %default]")
     parser.add_option("-o","--out",default="jobs",help="output directory [default: %default]")
     parser.add_option("-n","--nmax",default="-1",help="number of processed events per job [default: %default]")
@@ -54,7 +54,8 @@ if __name__ == '__main__':
     
     xmlTree = ET.parse(options.xml)
     for s in xmlTree.findall('sample'):        
-        for s0, t0, sig in submitList:
+        for s0, t0, sig, process, channel, frac in submitList:
+            if sig not in ['prompt','nonprompt']: continue
             sname = s.get('id')
             stag = s.get('tag')
             if sname == s0 and stag == t0:
@@ -83,7 +84,8 @@ if __name__ == '__main__':
                 fout.write('<data>\n')
                 fout.write("<sample id=\""+jname+"\" tag=\""+stag+"\">\n")
                 nc = 0
-                for i in range(len(files)):
+                files2read = int(frac*len(files))
+                for i in range(files2read):
 
                     nc = nc + 1
 
@@ -114,7 +116,7 @@ if __name__ == '__main__':
 
                 jid = 0
 
-                for f in fjobname:
+                for fidx, f in enumerate(fjobname):
                     print f, fjobid[jid]
                     outname = outpath+'/'+f+'/'+f+'_'+fjobid[jid]
                     outlog = outname+'.log'

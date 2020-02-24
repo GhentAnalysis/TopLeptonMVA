@@ -82,7 +82,10 @@ if __name__ == '__main__':
 
     for i in mvas:
         for k, v in hist.iteritems():
-            v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 100000, -1.0, 1.2)
+            if i in ['TTH','tZq']:
+                v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 100000, -1.1, 1.1)
+            else:
+                v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 100000, -0.4, 1.4)
 
     print 'Fill histograms ..'
     for ktr, tr in tree.iteritems():

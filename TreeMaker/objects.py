@@ -44,27 +44,32 @@ class electron():
         if math.fabs(self.dz) < 10E-20: self.dz = 10E-20
         self.dxylog = math.log(math.fabs(self.dxy))
         self.dzlog = math.log(math.fabs(self.dz))
+        self.missHits = ev.__getattr__("_lElectronMissingHits")[idx]
         self.relIso0p3 = ev.__getattr__("_relIso")[idx]
         self.mvaIDsegComp = ev.__getattr__("_lElectronMvaFall17NoIso")[idx]
         
         self.leptonMvaTTH = ev.__getattr__("_leptonMvaTTH")[idx]
         self.leptonMvatZq = ev.__getattr__("_leptonMvatZq")[idx]
 
-        passPt = bool(self.pt > 10)
-        passEta = bool(math.fabs(self.eta) < 2.5)
-        passIso = bool(self.miniIso < 0.4)
-        passIPSig = bool(math.fabs(self.sip3d) < 8)
-        passDxy = bool(math.fabs(self.dxy) < 0.05)
-        passDz = bool(math.fabs(self.dz) < 0.1)
-        passID = bool(self.POGNoIsoLoose == 1)
-    
-        self.passed = (passPt and passEta and passIPSig and passDxy and passDz and passIso and passID)
-        
         matchPdgId = ev.__getattr__("_lMatchPdgId")[idx]
         momPdgId = ev.__getattr__("_lMomPdgId")[idx]
         isPrompt = ev.__getattr__("_lIsPrompt")[idx]
         
-        self.isPrompt = isPrompt
+        passPt = bool(self.pt > 10)
+        passEta = bool(math.fabs(self.eta) < 2.5)
+        passIso = bool(self.miniIso < 0.4)
+        passHits = bool(self.missHits < 3)
+        passIPSig = bool(math.fabs(self.sip3d) < 8)
+        passDxy = bool(math.fabs(self.dxy) < 0.05)
+        passDz = bool(math.fabs(self.dz) < 0.1)
+        passID = bool(self.POGNoIsoLoose == 1)
+        passConv = bool(matchPdgId != abs(22))
+    
+#        self.passed = (passPt and passEta and passIPSig and passDxy and passDz and passIso and passID and passHits and passConv)
+        self.passed = (passPt and passEta and passIPSig and passDxy and passDz and passIso and passHits and passConv)
+        
+        self.isPrompt = isPrompt and bool(matchPdgId == abs(11))
+        self.isNonPrompt = (not isPrompt)
         
         self.px = self.pt*math.cos(self.phi)
         self.py = self.pt*math.sin(self.phi)
@@ -106,6 +111,10 @@ class muon():
         
         self.leptonMvaTTH = ev.__getattr__("_leptonMvaTTH")[idx]
         self.leptonMvatZq = ev.__getattr__("_leptonMvatZq")[idx]
+
+        matchPdgId = ev.__getattr__("_lMatchPdgId")[idx]
+        momPdgId = ev.__getattr__("_lMomPdgId")[idx]
+        isPrompt = ev.__getattr__("_lIsPrompt")[idx]
         
         passPt = bool(self.pt > 10)
         passEta = bool(math.fabs(self.eta) < 2.4)
@@ -117,11 +126,8 @@ class muon():
     
         self.passed = (passPt and passEta and passIso and passIPSig and passDxy and passDz and passID)
 
-        matchPdgId = ev.__getattr__("_lMatchPdgId")[idx]
-        momPdgId = ev.__getattr__("_lMomPdgId")[idx]
-        isPrompt = ev.__getattr__("_lIsPrompt")[idx]
-        
-        self.isPrompt = isPrompt
+        self.isPrompt = isPrompt and bool(matchPdgId == abs(13))
+        self.isNonPrompt = (not isPrompt)
         
         self.px = self.pt*math.cos(self.phi)
         self.py = self.pt*math.sin(self.phi)

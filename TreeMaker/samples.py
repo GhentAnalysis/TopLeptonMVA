@@ -14,7 +14,7 @@ def main(argv = None):
     usage = "usage: %prog [options]\n Script to create a list of ntuples"
         
     parser = OptionParser(usage)
-    parser.add_option("-p","--path",default="maite.iihe.ac.be/pnfs/iihe/cms/store/user/kskovpen/leptonMVA_2016/",help="storage path [default: %default]")
+    parser.add_option("-p","--path",default="maite.iihe.ac.be/pnfs/iihe/cms/store/user/kskovpen/TopLeptonMVA_2016/",help="storage path [default: %default]")
 
     (options, args) = parser.parse_args(sys.argv[1:])
     

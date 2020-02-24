@@ -96,10 +96,12 @@ if __name__ == '__main__':
                 
                 if idx == 0:
                     if l.isPrompt: tr = elecPrompt
-                    else: tr = elecNonPrompt
+                    elif l.isNonPrompt: tr = elecNonPrompt
+                    else: continue 
                 else:
                     if l.isPrompt: tr = muonPrompt
-                    else: tr = muonNonPrompt
+                    elif l.isNonPrompt: tr = muonNonPrompt
+                    else: continue
 
                 tr.weightDs.append(Event.weight)
                 tr.ptDs.append(l.pt)
@@ -130,8 +132,9 @@ if __name__ == '__main__':
             for i in range(nEvents):
                 data.append([eval('tr.'+v+'Ds['+str(i)+']') for v in c.variables])
             
-            x = xgb.DMatrix(data, feature_names=c.variables)
-            tr.leptonMvaTopDs = dl.predict(x)
+            if nEvents > 0:
+                x = xgb.DMatrix(data, feature_names=c.variables)
+                tr.leptonMvaTopDs = dl.predict(x)
 
         for i in range(nEvents):
             
