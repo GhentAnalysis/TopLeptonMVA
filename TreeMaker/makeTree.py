@@ -89,6 +89,8 @@ if __name__ == '__main__':
                 lep = obj.muon(ev,i,dl)
                 if lep.passed:
                     Muons.append(lep)
+            
+        obj.removeOverlap(Electrons,Muons)
                 
         for idx, o in enumerate([Electrons,Muons]):
             
@@ -112,6 +114,7 @@ if __name__ == '__main__':
                 tr.jetPtRelv2Ds.append(l.jetPtRelv2)
                 tr.jetPtRatioDs.append(l.jetPtRatio)
                 tr.jetBTagDs.append(l.jetBTag)
+                tr.jetBTagCSVDs.append(l.jetBTagCSV)
                 tr.sip3dDs.append(l.sip3d)
                 tr.dxyDs.append(l.dxylog)
                 tr.dzDs.append(l.dzlog)
@@ -147,6 +150,7 @@ if __name__ == '__main__':
             tr.jetPtRelv2[0] = tr.jetPtRelv2Ds[i]
             tr.jetPtRatio[0] = tr.jetPtRatioDs[i]
             tr.jetBTag[0] = tr.jetBTagDs[i]
+            tr.jetBTagCSV[0] = tr.jetBTagCSVDs[i]
             tr.sip3d[0] = tr.sip3dDs[i]
             tr.dxy[0] = tr.dxyDs[i]
             tr.dz[0] = tr.dzDs[i]
