@@ -18,13 +18,14 @@ def main(argv = None):
     usage = "usage: %prog [options]\n Script to submit Analyzer jobs to batch"
 
     parser = OptionParser(usage)
-    parser.add_option("-f","--files",default="2",help="number of files per job [default: %default]")
-    parser.add_option("-x","--xml",default="samples.xml",help="input xml configuration [default: %default]")
-    parser.add_option("-o","--out",default="jobs",help="output directory [default: %default]")
+    # 4 (2016), 6 (2017), 10 (2018)
+    parser.add_option("-f","--files",default="10",help="number of files per job [default: %default]")
+    parser.add_option("-x","--xml",default="samples_2018.xml",help="input xml configuration [default: %default]")
+    parser.add_option("-o","--out",default="jobs_train_2018",help="output directory [default: %default]")
     parser.add_option("-n","--nmax",default="-1",help="number of processed events per job [default: %default]")
     parser.add_option("-b","--batch",default="pbs",help="batch system to use [default: %default]")
-    parser.add_option("-y","--year",default="2016",help="year of the data taking [default: %default]")
-    parser.add_option("-m","--model",default="/user/kskovpen/analysis/LeptonMVA/CMSSW_10_2_20/src/TopLeptonMVA/TreeMaker/weights/elec2016.bin",help="model file [default: %default]")
+    parser.add_option("-y","--year",default="2018",help="year of the data taking [default: %default]")
+    parser.add_option("-m","--model",default="/user/kskovpen/analysis/LeptonMVA/CMSSW_10_2_20/src/TopLeptonMVA/TreeMaker/weights/muon2016.bin",help="model file [default: %default]")
 
     (options, args) = parser.parse_args(sys.argv[1:])
 
@@ -51,13 +52,16 @@ if __name__ == '__main__':
     submitList = c.submit2016
     if year == '2017': submitList = c.submit2017
     elif year == '2018': submitList = c.submit2018
+
+    nJobs = 0
     
     xmlTree = ET.parse(options.xml)
-    for s in xmlTree.findall('sample'):        
-        for s0, t0, sig, process, channel, frac in submitList:
-            if sig not in ['prompt','nonprompt']: continue
+    for s in xmlTree.findall('sample'):
+        for s0, t0, sig, lep, process, channel, train, test in submitList:
+            if sig not in ['prompt','nonprompt','all']: continue
             sname = s.get('id')
             stag = s.get('tag')
+#            if 'TTJets' not in sname: continue
             if sname == s0 and stag == t0:
                 files=[]
                 for child in s:
@@ -84,7 +88,8 @@ if __name__ == '__main__':
                 fout.write('<data>\n')
                 fout.write("<sample id=\""+jname+"\" tag=\""+stag+"\">\n")
                 nc = 0
-                files2read = int(frac*len(files))
+#                files2read = int(frac*len(files))
+                files2read = int(len(files))
                 for i in range(files2read):
 
                     nc = nc + 1
@@ -123,13 +128,22 @@ if __name__ == '__main__':
                     output = outname+'.root'
 
                     if (options.batch=='pbs'):
-                        res = None
-                        while res is None:
+                        
+                        NoErrors = False
+                        while NoErrors is False:
                             try:
-                                res = subprocess.check_output(['qsub','-N','TLMVATreeMaker','-q',c.batchqueue,'-o',outlog,'-j','oe','job.sh','-l','walltime='+c.walltime,'-v','nmax='+options.nmax+',sample='+f+',tag='+fjobtag[jid]+',xml='+fjobxml[jid]+',output='+output+',dout='+home+',model='+model+',proxy='+c.proxydir+c.proxy+',arch='+c.arch+' | grep -v \"Invalid credential\"'])
+                                res = subprocess.Popen(('qsub','-N','TopLeptonMVATreeMaker','-q',c.batchqueue,'-o',outlog,'-j','oe','job.sh','-l','walltime='+c.walltime,'-v','nmax='+options.nmax+',sample='+f+',tag='+fjobtag[jid]+',xml='+fjobxml[jid]+',output='+output+',dout='+home+',model='+model+',proxy='+c.proxydir+c.proxy+',arch='+c.arch), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                                out, err = res.communicate()
+                                NoErrors = ('Invalid credential' not in err)
+                                if not NoErrors: print '.. Resubmitted'
                             except KeyboardInterrupt:
                                 sys.exit(0)
                             except:
-                                pass
+                                pass                                
+
                     jid = jid + 1
+
+                nJobs += jid
+                
+    print 'Total number of jobs submitted =', nJobs
 

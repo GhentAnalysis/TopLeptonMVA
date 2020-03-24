@@ -17,7 +17,9 @@ def main(argv = None):
     usage = "usage: %prog [options]\n Script to produce ROCs"
                         
     parser = OptionParser(usage)
-    parser.add_option("-m","--mva",default="Top,TTH,tZq",help="input list of MVAs [default: %default]")
+    parser.add_option("-m","--mva",default="TTH,TZQ",help="input list of MVAs [default: %default]")
+#    parser.add_option("-m","--mva",default="TTH,TZQ,TTHHN,TZQHN",help="input list of MVAs [default: %default]")
+    parser.add_option("-i","--input",default="test.root",help="input file [default: %default]")
     parser.add_option("-n","--nmax",default=-1,help="max number of events [default: %default]")
 
     (options, args) = parser.parse_args(sys.argv[1:])
@@ -58,7 +60,7 @@ def drawRoc(roc,name,figDir):
     
     ax.set_xscale('log')
     ax.set_xlim(0.0001, 1)
-    ax.set_ylim(0.3, 1)
+    ax.set_ylim(0.2, 1)
     
     fig.savefig(figDir+'/roc.pdf')
     pyplot.close()
@@ -69,23 +71,27 @@ if __name__ == '__main__':
 
     tree = {}
     
-    for i in ['elecPrompt','elecNonPrompt','muonPrompt','muonNonPrompt']:
+#    for i in ['elecPrompt','elecNonPrompt','muonPrompt','muonNonPrompt']:
+    for i in ['elecPrompt','elecNonPrompt']:
         tree[i] = ROOT.TChain(i)
     
     for k, v in tree.iteritems():
-        v.Add('input.root')
+        v.Add(options.input)
 
     pref = 'leptonMva'
     mvas = options.mva.split(',')
         
-    hist = {'elecPrompt':{}, 'elecNonPrompt':{}, 'muonPrompt':{}, 'muonNonPrompt':{}}
+#    hist = {'elecPrompt':{}, 'elecNonPrompt':{}, 'muonPrompt':{}, 'muonNonPrompt':{}}
+#    hist = {'elecPrompt':{}, 'elecNonPrompt':{}}
+    hist = {'elecPrompt':{}, 'elecNonPrompt':{}}
 
     for i in mvas:
         for k, v in hist.iteritems():
-            if i in ['TTH','tZq']:
-                v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 100000, -1.1, 1.1)
+            if i in ['TTH','TZQ']:
+#            if i in ['TTH','TZQ','TTHHN','TZQHN']:
+                v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 10000, -1.2, 1.2)
             else:
-                v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 100000, -0.4, 1.4)
+                v[i] = ROOT.TH1F(i+'_'+k, i+'_'+k, 10000, -0.5, 1.5)
 
     print 'Fill histograms ..'
     for ktr, tr in tree.iteritems():

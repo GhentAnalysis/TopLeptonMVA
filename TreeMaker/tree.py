@@ -8,22 +8,27 @@ import ROOT
 class tree():
 
     def __init__(self, name):
-
+        
         self.weight \
         = array( 'f', [ -777 ] )
-
-        self.pt, self.eta, self.jetNDauChargedMVASel, self.miniRelIsoCharged, self.miniRelIsoNeutral, \
-        self.jetPtRelv2, self.jetPtRatio, self.jetBTag, self.sip3d, self.dxy, self.dz, self.relIso0p3, self.mvaIDsegComp, \
-        self.leptonMvaTTH, self.leptonMvatZq, self.leptonMvaTop \
-        = (array( 'f', [ -777 ] ) for _ in range(16))
+        
+        self.pt, self.eta, self.etaAbs, self.trackMultClosestJet, self.miniIsoCharged, self.miniIsoNeutral, \
+        self.pTRel, self.ptRatio, self.relIso, self.bTagDeepCSVClosestJet, self.bTagDeepJetClosestJet, \
+        self.sip3d, self.dxy, self.dz, \
+        self.dxylog, self.dzlog, self.segmentCompatibility, self.mvaIdSummer16GP, self.mvaIdFall17v2noIso, \
+        self.leptonMvaTTH, self.leptonMvaTZQ, self.leptonMvaTOP, \
+        self.leptonMvaTTHHN, self.leptonMvaTZQHN \
+        = (array( 'f', [ -777 ] ) for _ in range(24))
 
         self.weightDs \
         = []
 
-        self.ptDs, self.etaDs, self.jetNDauChargedMVASelDs, self.miniRelIsoChargedDs, self.miniRelIsoNeutralDs, \
-        self.jetPtRelv2Ds, self.jetPtRatioDs, self.jetBTagDs, self.sip3dDs, self.dxyDs, self.dzDs, self.relIso0p3Ds, self.mvaIDsegCompDs, \
-        self.leptonMvaTTHDs, self.leptonMvatZqDs, self.leptonMvaTopDs \
-        = ([] for _ in range(16))
+        self.ptDs, self.etaDs, self.etaAbsDs, self.trackMultClosestJetDs, self.miniIsoChargedDs, self.miniIsoNeutralDs, \
+        self.pTRelDs, self.ptRatioDs, self.relIsoDs, self.sip3dDs, self.dxyDs, self.dxylogDs, self.dzDs, self.dzlogDs, \
+        self.leptonMvaTTHHNDs, self.leptonMvaTZQHNDs, \
+        self.bTagDeepCSVClosestJetDs, self.bTagDeepJetClosestJetDs, self.mvaIdSummer16GPDs, \
+        self.segmentCompatibilityDs, self.mvaIdFall17v2noIsoDs \
+        = ([] for _ in range(21))
         
         self.t = ROOT.TTree( name, 'Training tree' )
 
@@ -31,21 +36,30 @@ class tree():
 
         self.t.Branch( 'pt', self.pt, 'pt/F' )
         self.t.Branch( 'eta', self.eta, 'eta/F' )
-        self.t.Branch( 'jetNDauChargedMVASel', self.jetNDauChargedMVASel, 'jetNDauChargedMVASel/F' )
-        self.t.Branch( 'miniRelIsoCharged', self.miniRelIsoCharged, 'miniRelIsoCharged/F' )
-        self.t.Branch( 'miniRelIsoNeutral', self.miniRelIsoNeutral, 'miniRelIsoNeutral/F' )
-        self.t.Branch( 'jetPtRelv2', self.jetPtRelv2, 'jetPtRelv2/F' )
-        self.t.Branch( 'jetPtRatio', self.jetPtRatio, 'jetPtRatio/F' )
-        self.t.Branch( 'jetBTag', self.jetBTag, 'jetBTag/F' )
+        self.t.Branch( 'etaAbs', self.etaAbs, 'etaAbs/F' )
+        self.t.Branch( 'trackMultClosestJet', self.trackMultClosestJet, 'trackMultClosestJet/F' )
+        self.t.Branch( 'miniIsoCharged', self.miniIsoCharged, 'miniIsoCharged/F' )
+        self.t.Branch( 'miniIsoNeutral', self.miniIsoNeutral, 'miniIsoNeutral/F' )
+        self.t.Branch( 'pTRel', self.pTRel, 'pTRel/F' )
+        self.t.Branch( 'ptRatio', self.ptRatio, 'ptRatio/F' )
+        self.t.Branch( 'relIso', self.relIso, 'relIso/F' )
+        self.t.Branch( 'bTagDeepCSVClosestJet', self.bTagDeepCSVClosestJet, 'bTagDeepCSVClosestJet/F' )
+        self.t.Branch( 'bTagDeepJetClosestJet', self.bTagDeepJetClosestJet, 'bTagDeepJetClosestJet/F' )
         self.t.Branch( 'sip3d', self.sip3d, 'sip3d/F' )
         self.t.Branch( 'dxy', self.dxy, 'dxy/F' )
         self.t.Branch( 'dz', self.dz, 'dz/F' )
-        self.t.Branch( 'relIso0p3', self.relIso0p3, 'relIso0p3/F' )
-        self.t.Branch( 'mvaIDsegComp', self.mvaIDsegComp, 'mvaIDsegComp/F' )
+        self.t.Branch( 'dxylog', self.dxylog, 'dxylog/F' )
+        self.t.Branch( 'dzlog', self.dzlog, 'dzlog/F' )
+        self.t.Branch( 'segmentCompatibility', self.segmentCompatibility, 'segmentCompatibility/F' )
+        self.t.Branch( 'mvaIdSummer16GP', self.mvaIdSummer16GP, 'mvaIdSummer16GP/F' )
+        self.t.Branch( 'mvaIdFall17v2noIso', self.mvaIdFall17v2noIso, 'mvaIdFall17v2noIso/F' )
         
         self.t.Branch( 'leptonMvaTTH', self.leptonMvaTTH, 'leptonMvaTTH/F' )
-        self.t.Branch( 'leptonMvatZq', self.leptonMvatZq, 'leptonMvatZq/F' )
-        self.t.Branch( 'leptonMvaTop', self.leptonMvaTop, 'leptonMvaTop/F' )
+        self.t.Branch( 'leptonMvaTZQ', self.leptonMvaTZQ, 'leptonMvaTZQ/F' )
+        self.t.Branch( 'leptonMvaTOP', self.leptonMvaTOP, 'leptonMvaTOP/F' )
+
+        self.t.Branch( 'leptonMvaTTHHN', self.leptonMvaTTHHN, 'leptonMvaTTHHN/F' )
+        self.t.Branch( 'leptonMvaTZQHN', self.leptonMvaTZQHN, 'leptonMvaTZQHN/F' )
         
     def fill(self):
 

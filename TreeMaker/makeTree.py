@@ -39,6 +39,9 @@ if __name__ == '__main__':
     options = main()
 
     ROOT.gROOT.SetBatch()
+    
+    ROOT.TMVA.Tools.Instance()
+    ROOT.TMVA.PyMethodBase.PyInitialize()
 
     outFile = ROOT.TFile.Open(options.output,"RECREATE")
 
@@ -63,7 +66,8 @@ if __name__ == '__main__':
     nEntries = gtr.GetEntries()
     print 'Number of events:', nEntries
 
-    dl = mva.mva(gtr, options.model)
+#    dl = mva.mva(gtr, options.model, 'xgb')
+    tmva = mva.mva(gtr, options.model, 'tmva')
     
     ie = 0
 
@@ -82,14 +86,14 @@ if __name__ == '__main__':
         for i in range(0,nLep):
             lepType = ev.__getattr__("_lFlavor")[i]
             if lepType == 0:
-                lep = obj.electron(ev,i,dl)
+                lep = obj.electron(ev,i)
                 if lep.passed:
                     Electrons.append(lep)
             elif lepType == 1:
-                lep = obj.muon(ev,i,dl)
+                lep = obj.muon(ev,i)
                 if lep.passed:
                     Muons.append(lep)
-            
+
         obj.removeOverlap(Electrons,Muons)
                 
         for idx, o in enumerate([Electrons,Muons]):
@@ -100,67 +104,114 @@ if __name__ == '__main__':
                     if l.isPrompt: tr = elecPrompt
                     elif l.isNonPrompt: tr = elecNonPrompt
                     else: continue 
-                else:
+                elif idx == 1:
                     if l.isPrompt: tr = muonPrompt
                     elif l.isNonPrompt: tr = muonNonPrompt
                     else: continue
+                else:
+                    print 'Using more collections than expected'
+                    sys.exit()
 
                 tr.weightDs.append(Event.weight)
+                
                 tr.ptDs.append(l.pt)
                 tr.etaDs.append(l.eta)
-                tr.jetNDauChargedMVASelDs.append(l.jetNDauChargedMVASel)
-                tr.miniRelIsoChargedDs.append(l.miniRelIsoCharged)
-                tr.miniRelIsoNeutralDs.append(l.miniRelIsoNeutral)
-                tr.jetPtRelv2Ds.append(l.jetPtRelv2)
-                tr.jetPtRatioDs.append(l.jetPtRatio)
-                tr.jetBTagDs.append(l.jetBTag)
-                tr.jetBTagCSVDs.append(l.jetBTagCSV)
+                tr.etaAbsDs.append(l.etaabs)
+                tr.trackMultClosestJetDs.append(l.trackMultClosestJet)
+                tr.miniIsoChargedDs.append(l.miniIsoCharged)
+                tr.miniIsoNeutralDs.append(l.miniIsoNeutral)
+                tr.pTRelDs.append(l.pTRel)
+                tr.ptRatioDs.append(l.ptRatio)
+                tr.relIsoDs.append(l.relIso)
                 tr.sip3dDs.append(l.sip3d)
-                tr.dxyDs.append(l.dxylog)
-                tr.dzDs.append(l.dzlog)
-                tr.relIso0p3Ds.append(l.relIso0p3)
-                tr.mvaIDsegCompDs.append(l.mvaIDsegComp)
+                tr.dxylogDs.append(l.dxylog)
+                tr.dxyDs.append(l.dxy)
+                tr.dzlogDs.append(l.dzlog)
+                tr.dzDs.append(l.dz)
+                tr.bTagDeepCSVClosestJetDs.append(l.bTagDeepCSVClosestJet)
+                tr.bTagDeepJetClosestJetDs.append(l.bTagDeepJetClosestJet)
+                tr.mvaIdSummer16GPDs.append(l.mvaIdSummer16GP)
+                tr.segmentCompatibilityDs.append(l.segmentCompatibility)
+                tr.mvaIdFall17v2noIsoDs.append(l.mvaIdFall17v2noIso)
                 
-                tr.leptonMvaTTHDs.append(l.leptonMvaTTH)
-                tr.leptonMvatZqDs.append(l.leptonMvatZq)
+                tr.leptonMvaTTHHNDs.append(l.leptonMvaTTH)
+                tr.leptonMvaTZQHNDs.append(l.leptonMvaTZQ)                
 
     print 'Fill output trees ..'
-    for tr in [elecPrompt,elecNonPrompt,muonPrompt,muonNonPrompt]:
+    for itr, tr in enumerate([elecPrompt,elecNonPrompt,muonPrompt,muonNonPrompt]):
+
+        isElec = True
+        
+        var = {}
+        for mva in ['TZQ','TTH']: var[mva] = c.var['Elec'][mva]
+        if itr > 1:
+            isElec = False
+            for mva in ['TZQ','TTH']: var[mva] = c.var['Muon'][mva]
         
         nEvents = len(tr.weightDs)
 
-        if dl.isValid:
+#        if dl.isValid:
             
-            data = []
-            for i in range(nEvents):
-                data.append([eval('tr.'+v+'Ds['+str(i)+']') for v in c.variables])
-            
-            if nEvents > 0:
-                x = xgb.DMatrix(data, feature_names=c.variables)
-                tr.leptonMvaTopDs = dl.predict(x)
+#            data = []
+#            for i in range(nEvents):
+#                data.append([eval('tr.'+v+'Ds['+str(i)+']') for v in var])
+
+#            if nEvents > 0:
+#                x = xgb.DMatrix(data, feature_names=var)
+#                tr.leptonMvaTopDs = dl.predictXGB(x)
 
         for i in range(nEvents):
             
-            tr.weight[0] = tr.weightDs[i]    
+            tr.weight[0] = tr.weightDs[i]
+            
+            tr.leptonMvaTTHHN[0] = tr.leptonMvaTTHHNDs[i]
+            tr.leptonMvaTZQHN[0] = tr.leptonMvaTZQHNDs[i]
+#            if dl.isValid: tr.leptonMvaTop[0] = tr.leptonMvaTopDs[i]
+
+            tmva.pt[0] = tr.ptDs[i]
+            tmva.eta[0] = tr.etaDs[i]
+            tmva.etaAbs[0] = tr.etaAbsDs[i]
+            tmva.trackMultClosestJet[0] = tr.trackMultClosestJetDs[i]
+            tmva.miniIsoCharged[0] = tr.miniIsoChargedDs[i]
+            tmva.miniIsoNeutral[0] = tr.miniIsoNeutralDs[i]
+            tmva.pTRel[0] = tr.pTRelDs[i]
+            tmva.ptRatio[0] = tr.ptRatioDs[i]
+            tmva.relIso[0] = tr.relIsoDs[i]
+            tmva.sip3d[0] = tr.sip3dDs[i]
+            tmva.dxy[0] = tr.dxyDs[i]
+            tmva.dxylog[0] = tr.dxylogDs[i]
+            tmva.dz[0] = tr.dzDs[i]
+            tmva.dzlog[0] = tr.dzlogDs[i]
+            tmva.bTagDeepCSVClosestJet[0] = tr.bTagDeepCSVClosestJetDs[i]
+            tmva.bTagDeepJetClosestJet[0] = tr.bTagDeepJetClosestJetDs[i]
+            tmva.mvaIdSummer16GP[0] = tr.mvaIdSummer16GPDs[i]
+            tmva.segmentCompatibility[0] = tr.segmentCompatibilityDs[i]
+            tmva.mvaIdFall17v2noIso[0] = tr.mvaIdFall17v2noIsoDs[i]
+
             tr.pt[0] = tr.ptDs[i]
             tr.eta[0] = tr.etaDs[i]
-            tr.jetNDauChargedMVASel[0] = tr.jetNDauChargedMVASelDs[i]
-            tr.miniRelIsoCharged[0] = tr.miniRelIsoChargedDs[i]
-            tr.miniRelIsoNeutral[0] = tr.miniRelIsoNeutralDs[i]
-            tr.jetPtRelv2[0] = tr.jetPtRelv2Ds[i]
-            tr.jetPtRatio[0] = tr.jetPtRatioDs[i]
-            tr.jetBTag[0] = tr.jetBTagDs[i]
-            tr.jetBTagCSV[0] = tr.jetBTagCSVDs[i]
+            tr.etaAbs[0] = tr.etaAbsDs[i]
+            tr.trackMultClosestJet[0] = tr.trackMultClosestJetDs[i]
+            tr.miniIsoCharged[0] = tr.miniIsoChargedDs[i]
+            tr.miniIsoNeutral[0] = tr.miniIsoNeutralDs[i]
+            tr.pTRel[0] = tr.pTRelDs[i]
+            tr.ptRatio[0] = tr.ptRatioDs[i]
+            tr.relIso[0] = tr.relIsoDs[i]
             tr.sip3d[0] = tr.sip3dDs[i]
             tr.dxy[0] = tr.dxyDs[i]
+            tr.dxylog[0] = tr.dxylogDs[i]
             tr.dz[0] = tr.dzDs[i]
-            tr.relIso0p3[0] = tr.relIso0p3Ds[i]
-            tr.mvaIDsegComp[0] = tr.mvaIDsegCompDs[i]
-                
-            tr.leptonMvaTTH[0] = tr.leptonMvaTTHDs[i]
-            tr.leptonMvatZq[0] = tr.leptonMvatZqDs[i]
-            if dl.isValid: tr.leptonMvaTop[0] = tr.leptonMvaTopDs[i]
-
+            tr.dzlog[0] = tr.dzlogDs[i]
+            tr.bTagDeepCSVClosestJet[0] = tr.bTagDeepCSVClosestJetDs[i]
+            tr.bTagDeepJetClosestJet[0] = tr.bTagDeepJetClosestJetDs[i]
+            tr.mvaIdSummer16GP[0] = tr.mvaIdSummer16GPDs[i]
+            tr.segmentCompatibility[0] = tr.segmentCompatibilityDs[i]
+            tr.mvaIdFall17v2noIso[0] = tr.mvaIdFall17v2noIsoDs[i]
+            
+            tr.leptonMvaTTH[0] = tmva.predictTMVA('Elec','TTH') if isElec else tmva.predictTMVA('Muon','TTH')
+            tr.leptonMvaTZQ[0] = tmva.predictTMVA('Elec','TZQ') if isElec else tmva.predictTMVA('Muon','TZQ')
+#            tr.leptonMvaTOP[0] = tmva.predictTMVA('Elec','TOP') if isElec else tmva.predictTMVA('Muon','TOP')
+            
             tr.fill()
         
     outFile.Write()

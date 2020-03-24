@@ -1,21 +1,27 @@
 # TopLeptonMVA
 
-Lepton MVA ID for the top quark analyses
+Lepton MVA ID for top quark analyses
+
+Install code:
+```
+git clone https://github.com/GhentAnalysis/TopLeptonMVA
+```
 
 Setup for production of training data sets:
 ```
-git clone https://github.com/GhentAnalysis/TopLeptonMVA
 cd TopLeptonMVA/TreeMaker
 ./makeTree.sh
 ```
 
-Cluster submission:
+Setup for MVA training and optimisation:
+```
+cd TopLeptonMVA/Train
+./train.py
+```
+
+Cluster submission for tree production and training is implemented in
+respective package:
 ```
 ./submit.py
 ```
 
-Setup for MVA training and optimisation:
-```
-git clone https://github.com/wverbeke/deepLearning
-```
-Follow the instructions mentioned on this page.
