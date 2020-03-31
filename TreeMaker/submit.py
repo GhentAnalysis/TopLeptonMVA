@@ -19,12 +19,12 @@ def main(argv = None):
 
     parser = OptionParser(usage)
     # 4 (2016), 6 (2017), 10 (2018)
-    parser.add_option("-f","--files",default="10",help="number of files per job [default: %default]")
-    parser.add_option("-x","--xml",default="samples_2018.xml",help="input xml configuration [default: %default]")
-    parser.add_option("-o","--out",default="jobs_train_2018",help="output directory [default: %default]")
+    parser.add_option("-f","--files",default="4",help="number of files per job [default: %default]")
+    parser.add_option("-x","--xml",default="samples_2016.xml",help="input xml configuration [default: %default]")
+    parser.add_option("-o","--out",default="jobs_train_2016",help="output directory [default: %default]")
     parser.add_option("-n","--nmax",default="-1",help="number of processed events per job [default: %default]")
     parser.add_option("-b","--batch",default="pbs",help="batch system to use [default: %default]")
-    parser.add_option("-y","--year",default="2018",help="year of the data taking [default: %default]")
+    parser.add_option("-y","--year",default="2016",help="year of the data taking [default: %default]")
     parser.add_option("-m","--model",default="/user/kskovpen/analysis/LeptonMVA/CMSSW_10_2_20/src/TopLeptonMVA/TreeMaker/weights/muon2016.bin",help="model file [default: %default]")
 
     (options, args) = parser.parse_args(sys.argv[1:])
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     xmlTree = ET.parse(options.xml)
     for s in xmlTree.findall('sample'):
         for s0, t0, sig, lep, process, channel, train, test in submitList:
-            if sig not in ['prompt','nonprompt','all']: continue
+#            if sig not in ['prompt','nonprompt','all']: continue
             sname = s.get('id')
             stag = s.get('tag')
 #            if 'TTJets' not in sname: continue
