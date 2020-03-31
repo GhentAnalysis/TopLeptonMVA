@@ -59,6 +59,7 @@ class electron():
         self.dzlog = math.log(max(math.fabs(self.dz),10E-20))
         self.missHits = ev.__getattr__("_lElectronMissingHits")[idx]
         self.relIso = ev.__getattr__("_relIso")[idx]
+        self.relIsoDeltaBeta = -777
         self.mvaIdFall17v2noIso = ev.__getattr__("_lElectronMvaFall17NoIso")[idx]
         self.mvaIdSummer16GP = ev.__getattr__("_lElectronMvaSummer16GP")[idx]
         self.segmentCompatibility = -777
@@ -66,6 +67,7 @@ class electron():
         
         self.leptonMvaTTH = ev.__getattr__("_leptonMvaTTH")[idx]
         self.leptonMvaTZQ = ev.__getattr__("_leptonMvatZq")[idx]
+        self.leptonMvaTOP = ev.__getattr__("_leptonMvaTOP")[idx]
 
         matchPdgId = ev.__getattr__("_lMatchPdgId")[idx]
         momPdgId = ev.__getattr__("_lMomPdgId")[idx]        
@@ -124,6 +126,7 @@ class muon():
         self.dxylog = math.log(max(math.fabs(self.dxy),10E-20))
         self.dzlog = math.log(max(math.fabs(self.dz),10E-20))
         self.relIso = ev.__getattr__("_relIso")[idx]
+        self.relIsoDeltaBeta = ev.__getattr__("_relIsoDeltaBeta")[idx]
         self.segmentCompatibility = ev.__getattr__("_lMuonSegComp")[idx]
         self.mvaIdFall17v2noIso = -777
         self.mvaIdSummer16GP = -777
@@ -131,6 +134,7 @@ class muon():
         
         self.leptonMvaTTH = ev.__getattr__("_leptonMvaTTH")[idx]
         self.leptonMvaTZQ = ev.__getattr__("_leptonMvatZq")[idx]
+        self.leptonMvaTOP = ev.__getattr__("_leptonMvaTOP")[idx]
 
         matchPdgId = ev.__getattr__("_lMatchPdgId")[idx]
         momPdgId = ev.__getattr__("_lMomPdgId")[idx]

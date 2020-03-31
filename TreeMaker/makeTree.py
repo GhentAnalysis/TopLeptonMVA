@@ -67,7 +67,7 @@ if __name__ == '__main__':
     print 'Number of events:', nEntries
 
 #    dl = mva.mva(gtr, options.model, 'xgb')
-    tmva = mva.mva(gtr, options.model, 'tmva')
+#    tmva = mva.mva(gtr, options.model, 'tmva')
     
     ie = 0
 
@@ -123,6 +123,7 @@ if __name__ == '__main__':
                 tr.pTRelDs.append(l.pTRel)
                 tr.ptRatioDs.append(l.ptRatio)
                 tr.relIsoDs.append(l.relIso)
+                tr.relIsoDeltaBetaDs.append(l.relIsoDeltaBeta)
                 tr.sip3dDs.append(l.sip3d)
                 tr.dxylogDs.append(l.dxylog)
                 tr.dxyDs.append(l.dxy)
@@ -135,18 +136,19 @@ if __name__ == '__main__':
                 tr.mvaIdFall17v2noIsoDs.append(l.mvaIdFall17v2noIso)
                 
                 tr.leptonMvaTTHHNDs.append(l.leptonMvaTTH)
-                tr.leptonMvaTZQHNDs.append(l.leptonMvaTZQ)                
+                tr.leptonMvaTZQHNDs.append(l.leptonMvaTZQ)
+                tr.leptonMvaTOPHNDs.append(l.leptonMvaTOP)
 
     print 'Fill output trees ..'
     for itr, tr in enumerate([elecPrompt,elecNonPrompt,muonPrompt,muonNonPrompt]):
 
         isElec = True
         
-        var = {}
-        for mva in ['TZQ','TTH']: var[mva] = c.var['Elec'][mva]
-        if itr > 1:
-            isElec = False
-            for mva in ['TZQ','TTH']: var[mva] = c.var['Muon'][mva]
+#        var = {}
+#        for mva in ['TZQ','TTH']: var[mva] = c.var['Elec'][mva]
+#        if itr > 1:
+#            isElec = False
+#            for mva in ['TZQ','TTH']: var[mva] = c.var['Muon'][mva]
         
         nEvents = len(tr.weightDs)
 
@@ -166,27 +168,28 @@ if __name__ == '__main__':
             
             tr.leptonMvaTTHHN[0] = tr.leptonMvaTTHHNDs[i]
             tr.leptonMvaTZQHN[0] = tr.leptonMvaTZQHNDs[i]
+            tr.leptonMvaTOPHN[0] = tr.leptonMvaTOPHNDs[i]
 #            if dl.isValid: tr.leptonMvaTop[0] = tr.leptonMvaTopDs[i]
 
-            tmva.pt[0] = tr.ptDs[i]
-            tmva.eta[0] = tr.etaDs[i]
-            tmva.etaAbs[0] = tr.etaAbsDs[i]
-            tmva.trackMultClosestJet[0] = tr.trackMultClosestJetDs[i]
-            tmva.miniIsoCharged[0] = tr.miniIsoChargedDs[i]
-            tmva.miniIsoNeutral[0] = tr.miniIsoNeutralDs[i]
-            tmva.pTRel[0] = tr.pTRelDs[i]
-            tmva.ptRatio[0] = tr.ptRatioDs[i]
-            tmva.relIso[0] = tr.relIsoDs[i]
-            tmva.sip3d[0] = tr.sip3dDs[i]
-            tmva.dxy[0] = tr.dxyDs[i]
-            tmva.dxylog[0] = tr.dxylogDs[i]
-            tmva.dz[0] = tr.dzDs[i]
-            tmva.dzlog[0] = tr.dzlogDs[i]
-            tmva.bTagDeepCSVClosestJet[0] = tr.bTagDeepCSVClosestJetDs[i]
-            tmva.bTagDeepJetClosestJet[0] = tr.bTagDeepJetClosestJetDs[i]
-            tmva.mvaIdSummer16GP[0] = tr.mvaIdSummer16GPDs[i]
-            tmva.segmentCompatibility[0] = tr.segmentCompatibilityDs[i]
-            tmva.mvaIdFall17v2noIso[0] = tr.mvaIdFall17v2noIsoDs[i]
+#            tmva.pt[0] = tr.ptDs[i]
+#            tmva.eta[0] = tr.etaDs[i]
+#            tmva.etaAbs[0] = tr.etaAbsDs[i]
+#            tmva.trackMultClosestJet[0] = tr.trackMultClosestJetDs[i]
+#            tmva.miniIsoCharged[0] = tr.miniIsoChargedDs[i]
+#            tmva.miniIsoNeutral[0] = tr.miniIsoNeutralDs[i]
+#            tmva.pTRel[0] = tr.pTRelDs[i]
+#            tmva.ptRatio[0] = tr.ptRatioDs[i]
+#            tmva.relIso[0] = tr.relIsoDs[i]
+#            tmva.sip3d[0] = tr.sip3dDs[i]
+#            tmva.dxy[0] = tr.dxyDs[i]
+#            tmva.dxylog[0] = tr.dxylogDs[i]
+#            tmva.dz[0] = tr.dzDs[i]
+#            tmva.dzlog[0] = tr.dzlogDs[i]
+#            tmva.bTagDeepCSVClosestJet[0] = tr.bTagDeepCSVClosestJetDs[i]
+#            tmva.bTagDeepJetClosestJet[0] = tr.bTagDeepJetClosestJetDs[i]
+#            tmva.mvaIdSummer16GP[0] = tr.mvaIdSummer16GPDs[i]
+#            tmva.segmentCompatibility[0] = tr.segmentCompatibilityDs[i]
+#            tmva.mvaIdFall17v2noIso[0] = tr.mvaIdFall17v2noIsoDs[i]
 
             tr.pt[0] = tr.ptDs[i]
             tr.eta[0] = tr.etaDs[i]
@@ -197,6 +200,7 @@ if __name__ == '__main__':
             tr.pTRel[0] = tr.pTRelDs[i]
             tr.ptRatio[0] = tr.ptRatioDs[i]
             tr.relIso[0] = tr.relIsoDs[i]
+            tr.relIsoDeltaBeta[0] = tr.relIsoDeltaBetaDs[i]
             tr.sip3d[0] = tr.sip3dDs[i]
             tr.dxy[0] = tr.dxyDs[i]
             tr.dxylog[0] = tr.dxylogDs[i]
@@ -208,8 +212,8 @@ if __name__ == '__main__':
             tr.segmentCompatibility[0] = tr.segmentCompatibilityDs[i]
             tr.mvaIdFall17v2noIso[0] = tr.mvaIdFall17v2noIsoDs[i]
             
-            tr.leptonMvaTTH[0] = tmva.predictTMVA('Elec','TTH') if isElec else tmva.predictTMVA('Muon','TTH')
-            tr.leptonMvaTZQ[0] = tmva.predictTMVA('Elec','TZQ') if isElec else tmva.predictTMVA('Muon','TZQ')
+#            tr.leptonMvaTTH[0] = tmva.predictTMVA('Elec','TTH') if isElec else tmva.predictTMVA('Muon','TTH')
+#            tr.leptonMvaTZQ[0] = tmva.predictTMVA('Elec','TZQ') if isElec else tmva.predictTMVA('Muon','TZQ')
 #            tr.leptonMvaTOP[0] = tmva.predictTMVA('Elec','TOP') if isElec else tmva.predictTMVA('Muon','TOP')
             
             tr.fill()
