@@ -2,7 +2,7 @@
 
 import os
 
-run = ['muon_TOP_2018','elec_TOP_2018']
+run = ['muon_TOP_2016','elec_TOP_2016']
 
 for r in run:
     
