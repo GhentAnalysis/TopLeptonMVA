@@ -94,7 +94,7 @@ if __name__ == '__main__':
                 if lep.passed:
                     Muons.append(lep)
 
-        obj.removeOverlap(Electrons,Muons)
+        Electrons = obj.removeOverlap(Electrons,Muons)
                 
         for idx, o in enumerate([Electrons,Muons]):
             

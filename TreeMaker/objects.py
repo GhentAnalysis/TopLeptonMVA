@@ -9,6 +9,8 @@ import functions as fun
 
 def removeOverlap(Electrons, Muons):
     
+    ElectronsCleaned = []
+    
     for eidx, e in enumerate(Electrons):
         
         eta = e.eta
@@ -16,9 +18,9 @@ def removeOverlap(Electrons, Muons):
         
         passed, drMin, idxMin = fun.overlap(eta,phi,Muons,0.05)
         
-        if not passed:
-            del Electrons[eidx]
-#            del Muons[idxMin]
+        if passed: ElectronsCleaned.append(Electrons[eidx])
+        
+    return ElectronsCleaned
 
 class event():
 
