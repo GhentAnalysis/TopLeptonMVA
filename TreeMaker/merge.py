@@ -21,12 +21,11 @@ def main(argv = None):
     usage = "usage: %prog [options]\n Script to merge output trees"
 
     parser = OptionParser(usage)
-    parser.add_option("-f","--files",default="info.xml",help="input xml file list [default: %default]")
-    parser.add_option("-d","--dir",default="srm://maite.iihe.ac.be/pnfs/iihe/cms/store/user/kskovpen/TopLeptonMVATrain/",help="output directory for the merged file on pnfs [default: %default]")
-    parser.add_option("-o","--out",default="2018.root",help="output file name [default: %default]")
-    parser.add_option("-y","--year",default="2018",help="year of data taking [default: %default]")
-    parser.add_option("-m","--mode",default="",help="only use for training or testing [default: %default]")
-    parser.add_option("-t","--test",default="test",help="test output file name [default: %default]")
+    parser.add_option("--files", default="info.xml", help="input xml file list [default: %default]")
+    parser.add_option("--dir", default="srm://maite.iihe.ac.be/pnfs/iihe/cms/store/user/kskovpen/TopLeptonMVATrain/", help="output directory for the merged file on pnfs [default: %default]")
+    parser.add_option("--out", default="2017.root", help="output file name [default: %default]")
+    parser.add_option("--year", default="2017", help="year of data taking [default: %default]")
+    parser.add_option("--mode", default="train", help="only use for training or testing [default: %default]")
 
     (options, args) = parser.parse_args(sys.argv[1:])
 
@@ -43,8 +42,8 @@ if __name__ == '__main__':
     promptTrain, promptProcTrain, promptTest, promptProcTest = [], [], [], []
     nonpromptTrain, nonpromptProcTrain, nonpromptTest, nonpromptProcTest = [], [], [], []
 
-    elecPromptTrain, elecNonPromptTrain, elecPromptTest, elecNonPromptTest = {}, {}, {}, {}
-    muonPromptTrain, muonNonPromptTrain, muonPromptTest, muonNonPromptTest = {}, {}, {}, {}
+    elecPromptTrain, elecNonpromptTrain, elecPromptTest, elecNonpromptTest = {}, {}, {}, {}
+    muonPromptTrain, muonNonpromptTrain, muonPromptTest, muonNonpromptTest = {}, {}, {}, {}
     
     print 'Merge and trim per dataset:\n'
     for s in xmlTree.findall('sample'):
@@ -61,7 +60,7 @@ if __name__ == '__main__':
         
         if schannel != '': sproc += '_'+schannel
         
-        if ssig not in ['prompt','nonprompt']:
+        if ssig not in ['prompt', 'nonprompt', 'all']:
             continue
         
         sys.stdout.write(sname)
@@ -113,8 +112,8 @@ if __name__ == '__main__':
         os.system('hadd -f '+outfile+' '+filestomerge+' > /dev/null')
         f = ROOT.TFile(outfile,"UPDATE")
         if ssig == 'prompt':
-            ROOT.gDirectory.Delete("elecNonPrompt;*")
-            ROOT.gDirectory.Delete("muonNonPrompt;*")
+            ROOT.gDirectory.Delete("elecNonprompt;*")
+            ROOT.gDirectory.Delete("muonNonprompt;*")
             if slep == 'all':
                 nElecPrompt = f.Get('elecPrompt').GetEntries()
                 nMuonPrompt = f.Get('muonPrompt').GetEntries()
@@ -165,51 +164,51 @@ if __name__ == '__main__':
             ROOT.gDirectory.Delete("elecPrompt;*")
             ROOT.gDirectory.Delete("muonPrompt;*")
             if slep == 'all':
-                nElecNonPrompt = f.Get('elecNonPrompt').GetEntries()
-                nMuonNonPrompt = f.Get('muonNonPrompt').GetEntries()
+                nElecNonprompt = f.Get('elecNonprompt').GetEntries()
+                nMuonNonprompt = f.Get('muonNonprompt').GetEntries()
                 if starget == 'train':
-                    if sproc in elecNonPromptTrain.keys():
-                        elecNonPromptTrain[sproc] += nElecNonPrompt
-                        muonNonPromptTrain[sproc] += nMuonNonPrompt
+                    if sproc in elecNonpromptTrain.keys():
+                        elecNonpromptTrain[sproc] += nElecNonprompt
+                        muonNonpromptTrain[sproc] += nMuonNonprompt
                     else:
-                        elecNonPromptTrain[sproc] = nElecNonPrompt
-                        muonNonPromptTrain[sproc] = nMuonNonPrompt
+                        elecNonpromptTrain[sproc] = nElecNonprompt
+                        muonNonpromptTrain[sproc] = nMuonNonprompt
                 else:
-                    if sproc in elecNonPromptTest.keys():
-                        elecNonPromptTest[sproc] += nElecNonPrompt
-                        muonNonPromptTest[sproc] += nMuonNonPrompt
+                    if sproc in elecNonpromptTest.keys():
+                        elecNonpromptTest[sproc] += nElecNonprompt
+                        muonNonpromptTest[sproc] += nMuonNonprompt
                     else:
-                        elecNonPromptTest[sproc] = nElecNonPrompt
-                        muonNonPromptTest[sproc] = nMuonNonPrompt
-                print 'nElecNonPrompt=\033[;1m'+str(nElecNonPrompt)+'\033[0;0m nMuonNonPrompt=\033[;1m'+str(nMuonNonPrompt)+'\033[0;0m\n'
+                        elecNonpromptTest[sproc] = nElecNonprompt
+                        muonNonpromptTest[sproc] = nMuonNonprompt
+                print 'nElecNonprompt=\033[;1m'+str(nElecNonprompt)+'\033[0;0m nMuonNonprompt=\033[;1m'+str(nMuonNonprompt)+'\033[0;0m\n'
             if slep == 'elec':
-                nElecNonPrompt = f.Get('elecNonPrompt').GetEntries()
-                ROOT.gDirectory.Delete("muonNonPrompt;*")
+                nElecNonprompt = f.Get('elecNonprompt').GetEntries()
+                ROOT.gDirectory.Delete("muonNonprompt;*")
                 if starget == 'train':
-                    if sproc in elecNonPromptTrain.keys():
-                        elecNonPromptTrain[sproc] += nElecNonPrompt
+                    if sproc in elecNonpromptTrain.keys():
+                        elecNonpromptTrain[sproc] += nElecNonprompt
                     else:
-                        elecNonPromptTrain[sproc] = nElecNonPrompt
+                        elecNonpromptTrain[sproc] = nElecNonprompt
                 else:
-                    if sproc in elecNonPromptTest.keys():
-                        elecNonPromptTest[sproc] += nElecNonPrompt
+                    if sproc in elecNonpromptTest.keys():
+                        elecNonpromptTest[sproc] += nElecNonprompt
                     else:
-                        elecNonPromptTest[sproc] = nElecNonPrompt                    
-                print 'nElecNonPrompt=\033[;1m'+str(nElecNonPrompt)+'\033[0;0m\n'
+                        elecNonpromptTest[sproc] = nElecNonprompt                    
+                print 'nElecNonprompt=\033[;1m'+str(nElecNonprompt)+'\033[0;0m\n'
             elif slep == 'muon':
-                nMuonNonPrompt = f.Get('muonNonPrompt').GetEntries()
-                ROOT.gDirectory.Delete("elecNonPrompt;*")
+                nMuonNonprompt = f.Get('muonNonprompt').GetEntries()
+                ROOT.gDirectory.Delete("elecNonprompt;*")
                 if starget == 'train':
-                    if sproc in muonNonPromptTrain.keys():
-                        muonNonPromptTrain[sproc] += nMuonNonPrompt
+                    if sproc in muonNonpromptTrain.keys():
+                        muonNonpromptTrain[sproc] += nMuonNonprompt
                     else:
-                        muonNonPromptTrain[sproc] = nMuonNonPrompt
+                        muonNonpromptTrain[sproc] = nMuonNonprompt
                 else:
-                    if sproc in muonNonPromptTest.keys():
-                        muonNonPromptTest[sproc] += nMuonNonPrompt
+                    if sproc in muonNonpromptTest.keys():
+                        muonNonpromptTest[sproc] += nMuonNonprompt
                     else:
-                        muonNonPromptTest[sproc] = nMuonNonPrompt                    
-                print 'nMuonNonPrompt=\033[;1m'+str(nMuonNonPrompt)+'\033[0;0m\n'                
+                        muonNonpromptTest[sproc] = nMuonNonprompt                    
+                print 'nMuonNonprompt=\033[;1m'+str(nMuonNonprompt)+'\033[0;0m\n'                
         f.Write()
         f.Close()
         sys.stdout.flush()
@@ -235,17 +234,17 @@ if __name__ == '__main__':
 
         f = ROOT.TFile(outfile,"OPEN")
         if idx == 0 or idx == 2: 
-            ROOT.gDirectory.Delete("elecNonPrompt;*")
-            ROOT.gDirectory.Delete("muonNonPrompt;*")
+            ROOT.gDirectory.Delete("elecNonprompt;*")
+            ROOT.gDirectory.Delete("muonNonprompt;*")
             nElecPrompt = f.Get('elecPrompt').GetEntries()
             nMuonPrompt = f.Get('muonPrompt').GetEntries()            
             print target+': '+'nElecPrompt=\033[;1m'+str(nElecPrompt)+'\033[0;0m nMuonPrompt=\033[;1m'+str(nMuonPrompt)+'\033[0;0m'
         elif idx == 1 or idx == 3:
             ROOT.gDirectory.Delete("elecPrompt;*")
             ROOT.gDirectory.Delete("muonPrompt;*")
-            nElecNonPrompt = f.Get('elecNonPrompt').GetEntries()
-            nMuonNonPrompt = f.Get('muonNonPrompt').GetEntries()
-            print target+': '+'nElecNonPrompt=\033[;1m'+str(nElecNonPrompt)+'\033[0;0m nMuonNonPrompt=\033[;1m'+str(nMuonNonPrompt)+'\033[0;0m'
+            nElecNonprompt = f.Get('elecNonprompt').GetEntries()
+            nMuonNonprompt = f.Get('muonNonprompt').GetEntries()
+            print target+': '+'nElecNonprompt=\033[;1m'+str(nElecNonprompt)+'\033[0;0m nMuonNonprompt=\033[;1m'+str(nMuonNonprompt)+'\033[0;0m'
 
     for idx, s in enumerate([promptTrain,nonpromptTrain,promptTest,nonpromptTest]):
 
@@ -258,7 +257,7 @@ if __name__ == '__main__':
         os.system('rm prompt_train.root nonprompt_train.root')
 
     if os.path.exists('prompt_test.root'):
-        os.system('hadd -f '+options.test+'_'+options.year+'.root prompt_test.root nonprompt_test.root > /dev/null')
+        os.system('hadd -f test_'+options.year+'.root prompt_test.root nonprompt_test.root > /dev/null')
         os.system('rm prompt_test.root nonprompt_test.root')
     
 #    print 'Copy over to pnfs'

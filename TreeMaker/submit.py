@@ -1,9 +1,10 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 
 import os
 import sys
 import xml.etree.ElementTree as ET
 import subprocess
+import htcondor
 import common as c
 
 from optparse import OptionParser
@@ -18,24 +19,61 @@ def main(argv = None):
     usage = "usage: %prog [options]\n Script to submit Analyzer jobs to batch"
 
     parser = OptionParser(usage)
-    # 4 (2016), 6 (2017), 10 (2018)
-    parser.add_option("-f","--files",default="4",help="number of files per job [default: %default]")
-    parser.add_option("-x","--xml",default="samples_2016.xml",help="input xml configuration [default: %default]")
-    parser.add_option("-o","--out",default="jobs_train_2016",help="output directory [default: %default]")
-    parser.add_option("-n","--nmax",default="-1",help="number of processed events per job [default: %default]")
-    parser.add_option("-b","--batch",default="pbs",help="batch system to use [default: %default]")
-    parser.add_option("-y","--year",default="2016",help="year of the data taking [default: %default]")
-    parser.add_option("-m","--model",default="/user/kskovpen/analysis/LeptonMVA/CMSSW_10_2_20/src/TopLeptonMVA/TreeMaker/weights/muon2016.bin",help="model file [default: %default]")
-
+    parser.add_option("--files", default="10", help="number of files per job [default: %default]")
+    parser.add_option("--xml", default="samples_UL18.xml", help="input xml configuration [default: %default]")
+    parser.add_option("--out", default="jobs_train_UL18_splitfine", help="output directory [default: %default]")
+#    parser.add_option("--out", default="jobs_train_UL17_all", help="output directory [default: %default]")
+#    parser.add_option("--nmax", default="20000", help="number of processed events per job [default: %default]")
+    parser.add_option("--nmax", default="-1", help="number of processed events per job [default: %default]")
+    parser.add_option("--year", default="2018", help="year of the data taking [default: %default]")
+    parser.add_option("--split", action="store_true", help="split into prompt and nonprompt [default: %default]")
+    parser.add_option("--splitfine", action="store_true", help="split into classes [default: %default]")
+    parser.add_option("--modelxgb",
+    default="TOP-UL.TOP_v1,\
+TOP-UL.4TOP_v1,\
+TOP-UL.TOP_v2,\
+TOP-UL.4TOP_v2,\
+TOP-UL.TOP_TAUFLIPv1,\
+TOP-UL.4TOP_TAUFLIPv1,\
+TOP-UL.TOP_TAUFLIPv2,\
+TOP-UL.4TOP_TAUFLIPv2", 
+    help="model file (xgboost) [default: %default]")
+    parser.add_option("--modeltmva", default="TOP", help="model file (TMVA) [default: %default]")
+    
     (options, args) = parser.parse_args(sys.argv[1:])
 
     return options
 
+def job(sample, tag, xml, output, home, wdir, fsh):
+
+    j = "#!/bin/bash\n\n"
+    
+    j += "export X509_USER_PROXY="+c.proxy+"\n"
+    
+    j += "echo \"Start: $(/bin/date)\"\n"
+    j += "echo \"User: $(/usr/bin/id)\"\n"
+    j += "echo \"Node: $(/bin/hostname)\"\n"
+    j += "echo \"CPUs: $(/bin/nproc)\"\n"
+    j += "echo \"Directory: $(/bin/pwd)\"\n"
+    
+    j += "source /cvmfs/cms.cern.ch/cmsset_default.sh\n"
+
+    j += "cd "+home+"\n"
+    
+    j += "export SCRAM_ARCH=slc7_amd64_gcc820\n"
+    j += "eval `scramv1 runtime -sh`\n"
+    
+    j += "cd "+wdir+"\n"
+    j += "python "+home+"/makeTree.py --sample "+sample+" --year "+options.year+" --tag "+tag+" --xml "+xml+" --output "+output+" --nmax "+options.nmax+(" --split " if options.split else "")+(" --splitfine " if options.splitfine else "")+(" --modelxgb="+options.modelxgb if options.modelxgb != "" else "")+(" --modeltmva="+options.modeltmva if options.modeltmva != "" else "")+"\n"
+    
+    with open(fsh, 'w') as f:
+        f.write(j)
+            
+    os.system('chmod u+x '+fsh)
+            
 if __name__ == '__main__':
 
     options = main()
-
-    os.system("cp /tmp/"+c.proxy+" "+c.proxydir+c.proxy)
 
     home = os.getcwd()
 
@@ -47,10 +85,10 @@ if __name__ == '__main__':
     os.system("mkdir "+outpath)
 
     year = options.year
-    model = options.model
     
     submitList = c.submit2016
-    if year == '2017': submitList = c.submit2017
+    if year == '2016APV': submitList = c.submit2016APV
+    elif year == '2017': submitList = c.submit2017
     elif year == '2018': submitList = c.submit2018
 
     nJobs = 0
@@ -58,10 +96,8 @@ if __name__ == '__main__':
     xmlTree = ET.parse(options.xml)
     for s in xmlTree.findall('sample'):
         for s0, t0, sig, lep, process, channel, train, test in submitList:
-#            if sig not in ['prompt','nonprompt','all']: continue
             sname = s.get('id')
             stag = s.get('tag')
-#            if 'TTJets' not in sname: continue
             if sname == s0 and stag == t0:
                 files=[]
                 for child in s:
@@ -96,7 +132,7 @@ if __name__ == '__main__':
 
                     fout.write("    <file>"+files[i]+"</file>\n")
 
-                    if (nc > int(options.files)):
+                    if (nc > int(options.files)-1):
                         fout.write("</sample>\n")
                         fout.write("</data>")
                         fout.close()
@@ -113,33 +149,33 @@ if __name__ == '__main__':
                             fjobxml.append(xml)
                             fout.write('<data>\n')
                             fout.write("<sample id=\""+jname+"\" tag=\""+stag+"\">\n")
-
-                if (nc <= int(options.files)):
+                            
+                if (nc <= int(options.files)-1):
                     fout.write("</sample>\n")
                     fout.write("</data>")
                     fout.close()
-
+                    
+                schedd = htcondor.Schedd()
                 jid = 0
-
+                
                 for fidx, f in enumerate(fjobname):
                     print f, fjobid[jid]
                     outname = outpath+'/'+f+'/'+f+'_'+fjobid[jid]
+                    outdir = outpath+'/'+f+'/'
                     outlog = outname+'.log'
                     output = outname+'.root'
 
-                    if (options.batch=='pbs'):
-                        
-                        NoErrors = False
-                        while NoErrors is False:
-                            try:
-                                res = subprocess.Popen(('qsub','-N','TopLeptonMVATreeMaker','-q',c.batchqueue,'-o',outlog,'-j','oe','job.sh','-l','walltime='+c.walltime,'-v','nmax='+options.nmax+',sample='+f+',tag='+fjobtag[jid]+',xml='+fjobxml[jid]+',output='+output+',dout='+home+',model='+model+',proxy='+c.proxydir+c.proxy+',arch='+c.arch), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                                out, err = res.communicate()
-                                NoErrors = ('Invalid credential' not in err)
-                                if not NoErrors: print '.. Resubmitted'
-                            except KeyboardInterrupt:
-                                sys.exit(0)
-                            except:
-                                pass                                
+                    job(fjobname[jid], fjobtag[jid], fjobxml[jid], output, home, outdir, outname+'.sh')
+                
+                    js = htcondor.Submit({\
+                    "executable": outname+'.sh', \
+                    "output": outname+'.out', \
+                    "error": outname+'.err', \
+                    "log": outname+'.log' \
+                    })
+                
+                    with schedd.transaction() as shd:
+                        cluster_id = js.queue(shd)
 
                     jid = jid + 1
 

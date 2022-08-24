@@ -1,13 +1,24 @@
 #!/bin/env bash
 
-nmax=1000
+nmax=20
 
-xml="test.xml"
+#xml="test.xml"
+xml="local.xml"
+#split="--splitfine"
+split=""
+#split="--split"
+modelxgb="TOP-UL.TOP_v1,TOP-UL.TOP_v2"
+#modelxgb=""
+modeltmva="TOP"
+year="2018"
 
 python makeTree.py \
 --output=output.root \
+${split} \
 --xml=${xml} \
 --nmax=${nmax} \
---sample=TTJets_SingleLeptFromTbar_TuneCUETP8M1_13TeV-madgraphMLM-pythia8 \
---model="weights/elec2016.bin" \
---tag=crab_MiniAOD2016v3_ext1-v2_TopLeptonMVA_2016
+--year=${year} \
+--sample=TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8 \
+--modelxgb=${modelxgb} \
+--modeltmva=${modeltmva} \
+--tag=crab_MiniAOD2017-v2_UL17

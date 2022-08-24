@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 
 import os
 import sys
@@ -12,32 +12,36 @@ def main(argv = None):
         argv = sys.argv[1:]
         
     usage = "usage: %prog [options]\n Script to create a list of ntuples"
-        
+
     parser = OptionParser(usage)
-    parser.add_option("-p","--path",default="maite.iihe.ac.be/pnfs/iihe/cms/store/user/kskovpen/TopLeptonMVA_2018/",help="storage path [default: %default]")
+    parser.add_option('--path', default='maite.iihe.ac.be/pnfs/iihe/cms/store/user/kskovpen/LeptonID', help='storage path [default: %default]')
+    parser.add_option('--year', default='UL16APV', help='year of data taking [default: %default]')
 
     (options, args) = parser.parse_args(sys.argv[1:])
-    
+
     return options                                            
 
 if __name__ == '__main__':
     
     options = main()
 
-    fout = open("samples.xml","w+")
+    fout = open('samples_'+options.year+'.xml','w+')
     fout.write('<data>\n')
 
-    ntPath = options.path
+    ntPath = options.path+'/'+options.year
     
-    dlist = os.popen('gfal-ls srm://'+ntPath+'/').read().splitlines()
+    gfal = 'eval `scram unsetenv -sh`; '
+
+    dlist = os.popen(gfal+'gfal-ls srm://'+ntPath+'/').read().splitlines()
 
     for i in dlist:
-        cpath = 'gfal-ls srm://'+ntPath+'/'+i
+        cpath = gfal+'gfal-ls srm://'+ntPath+'/'+i
         d1 = os.popen(cpath).read().splitlines()
         for i1 in d1:
+            if options.year not in i1: continue
             d2 = os.popen(cpath+'/'+i1).read().splitlines()
             if len(d2) != 1:
-                print 'Several runs found in', i 
+                print('Several runs found in', i)
                 exit
             files = []
             stats = 0
