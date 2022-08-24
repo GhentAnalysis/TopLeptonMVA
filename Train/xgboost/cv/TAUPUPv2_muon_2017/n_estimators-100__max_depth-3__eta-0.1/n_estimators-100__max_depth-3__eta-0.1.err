@@ -1,0 +1,39 @@
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/model_selection/_search.py:296: UserWarning: The total space of parameters 144 is smaller than n_iter=1000. Running 144 iterations. For exhaustive searches, use GridSearchCV.
+  UserWarning,
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/model_selection/_search.py:972: UserWarning: One or more of the train scores are non-finite: [-0.11303921 -0.10443736 -0.09579934         nan -0.11536608 -0.10934968
+ -0.10471644 -0.0989492  -0.11750283 -0.11249895 -0.10859504 -0.10413722
+ -0.10631167 -0.09524522 -0.08125343         nan -0.11193536 -0.10524583
+ -0.09975856 -0.092204   -0.1151716  -0.10985913 -0.1056675  -0.10044917
+ -0.09970339 -0.08366407 -0.06686332 -0.04561759 -0.1092374  -0.10215001
+ -0.09582515 -0.08680306 -0.11365262 -0.1083623  -0.10424138 -0.09875711
+ -0.09077417 -0.07199742 -0.05253253         nan -0.10762862 -0.10000321
+ -0.09281847 -0.08274005 -0.11317448 -0.10802322 -0.10381582 -0.09838632
+ -0.11364078 -0.11339312 -0.11339312 -0.11339312 -0.11573048 -0.11531989
+ -0.11531989 -0.11531989 -0.11749296 -0.11707363 -0.11707363 -0.11707363
+ -0.11018217 -0.11018702 -0.11018703 -0.11018703 -0.11325436 -0.11325676
+ -0.11325676 -0.11325676 -0.11578199 -0.11578394 -0.11578394 -0.11578394
+ -0.10655921 -0.10656216 -0.10656216 -0.10656216 -0.11180037 -0.11180146
+ -0.11180146 -0.11180146 -0.11518876 -0.11518885 -0.11518885 -0.11518885
+ -0.10387757 -0.10387938 -0.10387938 -0.10387938 -0.11092793 -0.11092863
+ -0.11092863 -0.11092863 -0.11463475 -0.11463463 -0.11463463 -0.11463463
+ -0.11671698 -0.11672136 -0.11672136 -0.11672136 -0.11780031 -0.11780514
+ -0.11780515 -0.11780515 -0.11959553 -0.1195975  -0.1195975  -0.11959751
+ -0.11396051 -0.11396093 -0.11396094 -0.11396094 -0.11633041 -0.11633064
+ -0.11633064 -0.11633064 -0.118186   -0.11818648 -0.11818648 -0.11818648
+ -0.11174149 -0.11174153 -0.11174153 -0.11174153 -0.11478461 -0.11478463
+ -0.11478463 -0.11478463 -0.11742025 -0.11742018 -0.11742018 -0.11742018
+ -0.11034781 -0.11034758 -0.11034758 -0.11034758 -0.11428802 -0.11428767
+ -0.11428767 -0.11428767 -0.11707301 -0.11707307 -0.11707307 -0.11707307]
+  category=UserWarning,

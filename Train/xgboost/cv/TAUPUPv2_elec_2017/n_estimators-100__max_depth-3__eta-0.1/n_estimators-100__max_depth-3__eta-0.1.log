@@ -1,0 +1,98 @@
+000 (3505023.000.000) 2022-01-15 17:31:26 Job submitted from host: <192.168.10.37:9618?addrs=192.168.10.37-9618&alias=schedd01.wn.iihe.ac.be&noUDP&sock=schedd_155913_ed9d>
+...
+001 (3505023.000.000) 2022-01-15 17:31:45 Job executing on host: <192.168.19.20:9618?addrs=192.168.19.20-9618&alias=node19-20.wn.iihe.ac.be&noUDP&sock=startd_1724_195d>
+...
+006 (3505023.000.000) 2022-01-15 17:31:54 Image size of job updated: 1295764
+	177  -  MemoryUsage of job (MB)
+	180480  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 17:36:55 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058088  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 17:41:56 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058108  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 17:46:56 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058120  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 17:51:56 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058124  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 17:56:57 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058128  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 18:01:57 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058136  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 18:16:58 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058140  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 18:26:59 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058172  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 18:37:01 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058176  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 18:47:02 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058180  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 18:57:03 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058188  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 19:12:04 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058204  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 19:17:04 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058220  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 19:22:05 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058224  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 19:27:05 Image size of job updated: 3152864
+	1034  -  MemoryUsage of job (MB)
+	1058236  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-15 19:47:07 Image size of job updated: 3152864
+	1050  -  MemoryUsage of job (MB)
+	1074988  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-16 05:28:07 Image size of job updated: 3152864
+	1051  -  MemoryUsage of job (MB)
+	1075264  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-16 05:48:10 Image size of job updated: 3152864
+	1051  -  MemoryUsage of job (MB)
+	1075276  -  ResidentSetSize of job (KB)
+...
+006 (3505023.000.000) 2022-01-16 09:33:33 Image size of job updated: 3152864
+	1051  -  MemoryUsage of job (MB)
+	1075388  -  ResidentSetSize of job (KB)
+...
+004 (3505023.000.000) 2022-01-16 13:18:56 Job was evicted.
+	(0) CPU times
+		Usr 0 19:40:12, Sys 0 00:02:48  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2    404292 
+	   Memory (MB)          :  1051           1       100 
+...
+009 (3505023.000.000) 2022-01-16 13:18:56 Job was aborted.
+	via condor_rm (by user kskovpen)
+...

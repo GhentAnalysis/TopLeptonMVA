@@ -1,0 +1,2290 @@
+Start: Sat Jan 15 17:31:44 CET 2022
+User: uid=20657(kskovpen) gid=20500(localusers) groups=20500(localusers),20501(localgrid)
+Node: node27-12.wn.iihe.ac.be
+CPUs: 1
+Directory: /storage_mnt/storage/user/kskovpen/analysis/LeptonID/CMSSW_10_6_28/src/LeptonID/TopLeptonMVA/Train/xgboost
+Input features: ['pt', 'eta', 'trackMultClosestJet', 'miniIsoCharged', 'miniIsoNeutral', 'pTRel', 'ptRatio', 'puppiCombIso', 'bTagDeepJetClosestJet', 'sip3d', 'dxylog', 'dzlog', 'mvaIdFall17v2noIso']
+Output features: ['pt', 'eta', 'trackMultClosestJet', 'miniIsoCharged', 'miniIsoNeutral', 'pTRel', 'ptRatio', 'puppiCombIso', 'bTagClosestJet', 'sip3d', 'dxylog', 'dzlog', 'idSeg']
+Read data ..
+Signal=192864, Background=60453
+train+validation=126658, test=126659
+pt: [881.6862182617188, 740.3268432617188]
+eta: [2.499976873397827, 2.4999303817749023]
+trackMultClosestJet: [27.0, 29.0]
+miniIsoCharged: [0.3999522924423218, 0.3999652564525604]
+miniIsoNeutral: [0.39898961782455444, 0.3999592959880829]
+pTRel: [562.937255859375, 1508.81201171875]
+ptRatio: [1.5, 1.5]
+puppiCombIso: [14.001482009887695, 15.243759155273438]
+bTagDeepJetClosestJet: [0.9999632835388184, 0.9999825954437256]
+sip3d: [7.983871936798096, 7.999667644500732]
+dxylog: [-3.0041816234588623, -2.9977900981903076]
+dzlog: [-2.3038015365600586, -2.302874803543091]
+mvaIdFall17v2noIso: [1.0, 1.0]
+Train ..
+Fitting 3 folds for each of 144 candidates, totalling 432 fits
+[CV 1/3; 1/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 1/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.145) total time=  23.3s
+[CV 2/3; 1/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 1/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.143) total time=  24.6s
+[CV 3/3; 1/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 1/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.138, test=-0.142) total time=  23.1s
+[CV 1/3; 2/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 2/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.956, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.140) total time=  59.5s
+[CV 2/3; 2/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 2/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.139) total time=  56.7s
+[CV 3/3; 2/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 2/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.137) total time=  57.5s
+[CV 1/3; 3/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 3/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.959, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.138) total time= 1.9min
+[CV 2/3; 3/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 3/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.959, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.136) total time= 1.9min
+[CV 3/3; 3/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 3/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.135) total time= 1.9min
+[CV 1/3; 4/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 4/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.962, test=0.951) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.111, test=-0.137) total time= 3.9min
+[CV 2/3; 4/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 4/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.964, test=0.951) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.107, test=-0.135) total time= 3.9min
+[CV 3/3; 4/144] START gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 4/144] END gamma=0.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.964, test=0.952) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.108, test=-0.134) total time= 3.8min
+[CV 1/3; 5/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 5/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.146) total time=  23.1s
+[CV 2/3; 5/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 5/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time=  23.3s
+[CV 3/3; 5/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 5/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.143) total time=  23.2s
+[CV 1/3; 6/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 6/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time=  54.6s
+[CV 2/3; 6/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 6/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time=  54.9s
+[CV 3/3; 6/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 6/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.132, test=-0.138) total time=  55.2s
+[CV 1/3; 7/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 7/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.956, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.139) total time= 1.8min
+[CV 2/3; 7/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 7/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.138) total time= 1.8min
+[CV 3/3; 7/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 7/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.957, test=0.952) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.126, test=-0.136) total time= 1.8min
+[CV 1/3; 8/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 8/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.138) total time= 3.6min
+[CV 2/3; 8/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 8/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.121, test=-0.137) total time= 3.6min
+[CV 3/3; 8/144] START gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 8/144] END gamma=0.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.988) LogLoss: (train=-0.120, test=-0.134) total time= 3.4min
+[CV 1/3; 9/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 9/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.147) total time=  21.2s
+[CV 2/3; 9/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 9/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.146) total time=  20.7s
+[CV 3/3; 9/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 9/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.144) total time=  20.5s
+[CV 1/3; 10/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 10/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.134, test=-0.143) total time=  50.1s
+[CV 2/3; 10/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 10/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time=  50.3s
+[CV 3/3; 10/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 10/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.139) total time=  50.5s
+[CV 1/3; 11/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 11/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.955, test=0.952) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.130, test=-0.141) total time= 1.7min
+[CV 2/3; 11/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 11/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.955, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.130, test=-0.139) total time= 1.7min
+[CV 3/3; 11/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 11/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.955, test=0.952) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.130, test=-0.137) total time= 1.7min
+[CV 1/3; 12/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 12/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.957, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.139) total time= 3.4min
+[CV 2/3; 12/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 12/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.138) total time= 3.5min
+[CV 3/3; 12/144] START gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 12/144] END gamma=0.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.957, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.136) total time= 3.4min
+[CV 1/3; 13/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 13/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.955, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.130, test=-0.140) total time=  32.3s
+[CV 2/3; 13/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 13/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time=  31.8s
+[CV 3/3; 13/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 13/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.130, test=-0.138) total time=  32.3s
+[CV 1/3; 14/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 14/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.960, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.118, test=-0.137) total time= 1.3min
+[CV 2/3; 14/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 14/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.958, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.136) total time= 1.3min
+[CV 3/3; 14/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 14/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.135) total time= 1.3min
+[CV 1/3; 15/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 15/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.965, test=0.952) AUC: (train=0.994, test=0.987) LogLoss: (train=-0.104, test=-0.135) total time= 2.6min
+[CV 2/3; 15/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 15/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.964, test=0.951) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.106, test=-0.134) total time= 2.6min
+[CV 3/3; 15/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 15/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.964, test=0.952) AUC: (train=0.993, test=0.988) LogLoss: (train=-0.105, test=-0.132) total time= 2.5min
+[CV 1/3; 16/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 16/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.973, test=0.951) AUC: (train=0.996, test=0.987) LogLoss: (train=-0.085, test=-0.133) total time= 5.1min
+[CV 2/3; 16/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 16/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.973, test=0.952) AUC: (train=0.996, test=0.987) LogLoss: (train=-0.086, test=-0.132) total time= 5.1min
+[CV 3/3; 16/144] START gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 16/144] END gamma=0.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.973, test=0.950) AUC: (train=0.996, test=0.987) LogLoss: (train=-0.086, test=-0.131) total time= 5.1min
+[CV 1/3; 17/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 17/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.134, test=-0.142) total time=  29.9s
+[CV 2/3; 17/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 17/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.141) total time=  29.6s
+[CV 3/3; 17/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 17/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.139) total time=  29.7s
+[CV 1/3; 18/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 18/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.956, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.127, test=-0.138) total time= 1.2min
+[CV 2/3; 18/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 18/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.957, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.127, test=-0.137) total time= 1.2min
+[CV 3/3; 18/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 18/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.956, test=0.952) AUC: (train=0.989, test=0.988) LogLoss: (train=-0.127, test=-0.135) total time= 1.2min
+[CV 1/3; 19/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 19/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.959, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.121, test=-0.137) total time= 2.3min
+[CV 2/3; 19/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 19/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.121, test=-0.136) total time= 2.3min
+[CV 3/3; 19/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 19/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.988) LogLoss: (train=-0.120, test=-0.134) total time= 2.3min
+[CV 1/3; 20/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 20/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.962, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.112, test=-0.136) total time= 4.6min
+[CV 2/3; 20/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 20/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.962, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.113, test=-0.135) total time= 4.5min
+[CV 3/3; 20/144] START gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 20/144] END gamma=0.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.962, test=0.951) AUC: (train=0.992, test=0.988) LogLoss: (train=-0.112, test=-0.133) total time= 4.6min
+[CV 1/3; 21/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 21/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.143) total time=  28.1s
+[CV 2/3; 21/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 21/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.142) total time=  27.8s
+[CV 3/3; 21/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 21/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time=  27.5s
+[CV 1/3; 22/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 22/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.955, test=0.952) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.140) total time= 1.1min
+[CV 2/3; 22/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 22/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 1.1min
+[CV 3/3; 22/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 22/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.956, test=0.952) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.137) total time= 1.1min
+[CV 1/3; 23/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 23/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.957, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.138) total time= 2.2min
+[CV 2/3; 23/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 23/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.137) total time= 2.1min
+[CV 3/3; 23/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 23/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.957, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.136) total time= 2.2min
+[CV 1/3; 24/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 24/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.960, test=0.953) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.137) total time= 4.2min
+[CV 2/3; 24/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 24/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.960, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.136) total time= 4.2min
+[CV 3/3; 24/144] START gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 24/144] END gamma=0.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.960, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.135) total time= 4.2min
+[CV 1/3; 25/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 25/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.958, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.122, test=-0.138) total time=  40.4s
+[CV 2/3; 25/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 25/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.958, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.122, test=-0.136) total time=  40.3s
+[CV 3/3; 25/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 25/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.958, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.123, test=-0.135) total time=  40.1s
+[CV 1/3; 26/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 26/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.964, test=0.951) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.106, test=-0.135) total time= 1.6min
+[CV 2/3; 26/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 26/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.963, test=0.951) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.107, test=-0.133) total time= 1.6min
+[CV 3/3; 26/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 26/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.963, test=0.951) AUC: (train=0.993, test=0.988) LogLoss: (train=-0.108, test=-0.132) total time= 1.6min
+[CV 1/3; 27/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 27/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.972, test=0.951) AUC: (train=0.996, test=0.987) LogLoss: (train=-0.087, test=-0.133) total time= 3.2min
+[CV 2/3; 27/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 27/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.971, test=0.951) AUC: (train=0.995, test=0.987) LogLoss: (train=-0.090, test=-0.132) total time= 3.2min
+[CV 3/3; 27/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 27/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.971, test=0.951) AUC: (train=0.995, test=0.987) LogLoss: (train=-0.090, test=-0.131) total time= 3.1min
+[CV 1/3; 28/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 28/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.983, test=0.951) AUC: (train=0.998, test=0.987) LogLoss: (train=-0.063, test=-0.132) total time= 6.3min
+[CV 2/3; 28/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 28/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.983, test=0.951) AUC: (train=0.998, test=0.987) LogLoss: (train=-0.064, test=-0.131) total time= 6.3min
+[CV 3/3; 28/144] START gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 28/144] END gamma=0.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.982, test=0.950) AUC: (train=0.998, test=0.987) LogLoss: (train=-0.064, test=-0.130) total time= 6.3min
+[CV 1/3; 29/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 29/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.130, test=-0.140) total time=  35.5s
+[CV 2/3; 29/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 29/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time=  36.3s
+[CV 3/3; 29/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 29/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.137) total time=  35.5s
+[CV 1/3; 30/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 30/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.123, test=-0.137) total time= 1.4min
+[CV 2/3; 30/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 30/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.123, test=-0.136) total time= 1.4min
+[CV 3/3; 30/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 30/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.988) LogLoss: (train=-0.123, test=-0.134) total time= 1.4min
+[CV 1/3; 31/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 31/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.961, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.115, test=-0.136) total time= 2.8min
+[CV 2/3; 31/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 31/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.961, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.116, test=-0.135) total time= 2.8min
+[CV 3/3; 31/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 31/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.961, test=0.951) AUC: (train=0.991, test=0.988) LogLoss: (train=-0.115, test=-0.133) total time= 2.8min
+[CV 1/3; 32/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 32/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.965, test=0.952) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.105, test=-0.135) total time= 5.4min
+[CV 2/3; 32/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 32/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.964, test=0.952) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.107, test=-0.134) total time= 5.3min
+[CV 3/3; 32/144] START gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 32/144] END gamma=0.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.965, test=0.951) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.106, test=-0.132) total time= 5.4min
+[CV 1/3; 33/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 33/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time=  32.3s
+[CV 2/3; 33/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 33/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time=  32.8s
+[CV 3/3; 33/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 33/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time=  32.8s
+[CV 1/3; 34/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 34/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.128, test=-0.139) total time= 1.3min
+[CV 2/3; 34/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 34/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.128, test=-0.138) total time= 1.3min
+[CV 3/3; 34/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 34/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.956, test=0.952) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.128, test=-0.136) total time= 1.3min
+[CV 1/3; 35/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 35/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.959, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.122, test=-0.137) total time= 2.5min
+[CV 2/3; 35/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 35/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.959, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.122, test=-0.137) total time= 2.5min
+[CV 3/3; 35/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 35/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.958, test=0.951) AUC: (train=0.990, test=0.988) LogLoss: (train=-0.122, test=-0.135) total time= 2.5min
+[CV 1/3; 36/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 36/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.962, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.114, test=-0.136) total time= 4.9min
+[CV 2/3; 36/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 36/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.962, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.114, test=-0.136) total time= 4.9min
+[CV 3/3; 36/144] START gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 36/144] END gamma=0.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.962, test=0.951) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.114, test=-0.134) total time= 4.9min
+[CV 1/3; 37/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 37/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.962, test=0.951) AUC: (train=0.993, test=0.987) LogLoss: (train=-0.111, test=-0.136) total time=  47.9s
+[CV 2/3; 37/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 37/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.961, test=0.951) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.112, test=-0.134) total time=  47.5s
+[CV 3/3; 37/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 37/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.962, test=0.952) AUC: (train=0.992, test=0.988) LogLoss: (train=-0.113, test=-0.133) total time=  47.2s
+[CV 1/3; 38/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 38/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.971, test=0.951) AUC: (train=0.995, test=0.987) LogLoss: (train=-0.090, test=-0.133) total time= 2.0min
+[CV 2/3; 38/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 38/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.970, test=0.951) AUC: (train=0.995, test=0.987) LogLoss: (train=-0.093, test=-0.131) total time= 2.0min
+[CV 3/3; 38/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 38/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.970, test=0.952) AUC: (train=0.995, test=0.988) LogLoss: (train=-0.093, test=-0.130) total time= 2.0min
+[CV 1/3; 39/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 39/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.981, test=0.951) AUC: (train=0.998, test=0.987) LogLoss: (train=-0.067, test=-0.131) total time= 3.9min
+[CV 2/3; 39/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 39/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.979, test=0.952) AUC: (train=0.998, test=0.987) LogLoss: (train=-0.071, test=-0.129) total time= 3.9min
+[CV 3/3; 39/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 39/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.979, test=0.950) AUC: (train=0.998, test=0.987) LogLoss: (train=-0.071, test=-0.129) total time= 3.8min
+[CV 1/3; 40/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 40/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.991, test=0.949) AUC: (train=1.000, test=0.986) LogLoss: (train=-0.042, test=-0.133) total time= 7.6min
+[CV 2/3; 40/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 40/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.990, test=0.950) AUC: (train=0.999, test=0.987) LogLoss: (train=-0.044, test=-0.130) total time= 7.6min
+[CV 3/3; 40/144] START gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 40/144] END gamma=0.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.989, test=0.949) AUC: (train=0.999, test=0.987) LogLoss: (train=-0.045, test=-0.130) total time= 7.7min
+[CV 1/3; 41/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 41/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.128, test=-0.139) total time=  41.6s
+[CV 2/3; 41/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 41/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.128, test=-0.137) total time=  41.3s
+[CV 3/3; 41/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 41/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.957, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.128, test=-0.137) total time=  40.7s
+[CV 1/3; 42/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 42/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.136) total time= 1.6min
+[CV 2/3; 42/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 42/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.135) total time= 1.6min
+[CV 3/3; 42/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 42/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.959, test=0.952) AUC: (train=0.991, test=0.988) LogLoss: (train=-0.120, test=-0.134) total time= 1.6min
+[CV 1/3; 43/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 43/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.963, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.111, test=-0.135) total time= 3.1min
+[CV 2/3; 43/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 43/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.963, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.112, test=-0.134) total time= 3.1min
+[CV 3/3; 43/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 43/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.963, test=0.951) AUC: (train=0.992, test=0.988) LogLoss: (train=-0.111, test=-0.133) total time= 3.2min
+[CV 1/3; 44/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 44/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.968, test=0.952) AUC: (train=0.994, test=0.987) LogLoss: (train=-0.099, test=-0.135) total time= 6.2min
+[CV 2/3; 44/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 44/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.967, test=0.951) AUC: (train=0.994, test=0.987) LogLoss: (train=-0.102, test=-0.133) total time= 6.2min
+[CV 3/3; 44/144] START gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 44/144] END gamma=0.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.968, test=0.951) AUC: (train=0.994, test=0.987) LogLoss: (train=-0.100, test=-0.132) total time= 6.2min
+[CV 1/3; 45/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 45/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.141) total time=  36.7s
+[CV 2/3; 45/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 45/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.140) total time=  36.7s
+[CV 3/3; 45/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 45/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.139) total time=  36.8s
+[CV 1/3; 46/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 46/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.957, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.138) total time= 1.4min
+[CV 2/3; 46/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 46/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.957, test=0.952) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.137) total time= 1.4min
+[CV 3/3; 46/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 46/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.957, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.126, test=-0.135) total time= 1.4min
+[CV 1/3; 47/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 47/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.960, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.119, test=-0.137) total time= 2.7min
+[CV 2/3; 47/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 47/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.960, test=0.952) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.136) total time= 2.7min
+[CV 3/3; 47/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 47/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.960, test=0.951) AUC: (train=0.991, test=0.987) LogLoss: (train=-0.120, test=-0.134) total time= 2.7min
+[CV 1/3; 48/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 48/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.964, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.110, test=-0.136) total time= 5.2min
+[CV 2/3; 48/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 48/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.964, test=0.952) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.111, test=-0.135) total time= 5.2min
+[CV 3/3; 48/144] START gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 48/144] END gamma=0.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.964, test=0.951) AUC: (train=0.992, test=0.987) LogLoss: (train=-0.111, test=-0.133) total time= 5.2min
+[CV 1/3; 49/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 49/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.145) total time=  23.5s
+[CV 2/3; 49/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 49/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.143) total time=  23.6s
+[CV 3/3; 49/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 49/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time=  23.8s
+[CV 1/3; 50/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 50/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.145) total time=  53.0s
+[CV 2/3; 50/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 50/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time=  53.3s
+[CV 3/3; 50/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 50/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.138, test=-0.142) total time=  53.7s
+[CV 1/3; 51/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 51/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.145) total time= 1.7min
+[CV 2/3; 51/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 51/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time= 1.8min
+[CV 3/3; 51/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 51/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.138, test=-0.142) total time= 1.7min
+[CV 1/3; 52/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 52/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.145) total time= 3.4min
+[CV 2/3; 52/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 52/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time= 3.5min
+[CV 3/3; 52/144] START gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 52/144] END gamma=5.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.138, test=-0.142) total time= 3.4min
+[CV 1/3; 53/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 53/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.146) total time=  21.5s
+[CV 2/3; 53/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 53/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time=  21.3s
+[CV 3/3; 53/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 53/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.143) total time=  21.5s
+[CV 1/3; 54/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 54/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time=  49.3s
+[CV 2/3; 54/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 54/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time=  49.5s
+[CV 3/3; 54/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 54/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time=  51.6s
+[CV 1/3; 55/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 55/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 1.6min
+[CV 2/3; 55/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 55/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 1.6min
+[CV 3/3; 55/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 55/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 1.7min
+[CV 1/3; 56/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 56/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 3.2min
+[CV 2/3; 56/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 56/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 3.3min
+[CV 3/3; 56/144] START gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 56/144] END gamma=5.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 3.3min
+[CV 1/3; 57/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 57/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.147) total time=  21.5s
+[CV 2/3; 57/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 57/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.951, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.146) total time=  21.1s
+[CV 3/3; 57/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 57/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.145) total time=  21.2s
+[CV 1/3; 58/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 58/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.145) total time=  49.7s
+[CV 2/3; 58/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 58/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time=  49.7s
+[CV 3/3; 58/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 58/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time=  50.4s
+[CV 1/3; 59/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 59/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.145) total time= 1.6min
+[CV 2/3; 59/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 59/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time= 1.6min
+[CV 3/3; 59/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 59/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 1.6min
+[CV 1/3; 60/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 60/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.145) total time= 3.2min
+[CV 2/3; 60/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 60/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time= 3.2min
+[CV 3/3; 60/144] START gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 60/144] END gamma=5.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 3.1min
+[CV 1/3; 61/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 61/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time=  30.8s
+[CV 2/3; 61/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 61/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time=  30.3s
+[CV 3/3; 61/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 61/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.133, test=-0.138) total time=  30.5s
+[CV 1/3; 62/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 62/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time= 1.2min
+[CV 2/3; 62/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 62/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time= 1.2min
+[CV 3/3; 62/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 62/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.133, test=-0.138) total time= 1.2min
+[CV 1/3; 63/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 63/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time= 2.4min
+[CV 2/3; 63/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 63/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time= 2.4min
+[CV 3/3; 63/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 63/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.133, test=-0.138) total time= 2.3min
+[CV 1/3; 64/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 64/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time= 4.7min
+[CV 2/3; 64/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 64/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time= 4.7min
+[CV 3/3; 64/144] START gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 64/144] END gamma=5.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.133, test=-0.138) total time= 4.6min
+[CV 1/3; 65/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 65/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time=  28.7s
+[CV 2/3; 65/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 65/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time=  28.6s
+[CV 3/3; 65/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 65/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time=  28.7s
+[CV 1/3; 66/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 66/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 1.1min
+[CV 2/3; 66/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 66/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time= 1.1min
+[CV 3/3; 66/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 66/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time= 1.1min
+[CV 1/3; 67/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 67/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 2.2min
+[CV 2/3; 67/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 67/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time= 2.1min
+[CV 3/3; 67/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 67/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time= 2.1min
+[CV 1/3; 68/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 68/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 4.3min
+[CV 2/3; 68/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 68/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time= 4.2min
+[CV 3/3; 68/144] START gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 68/144] END gamma=5.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time= 4.2min
+[CV 1/3; 69/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 69/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time=  27.2s
+[CV 2/3; 69/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 69/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time=  26.5s
+[CV 3/3; 69/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 69/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time=  25.3s
+[CV 1/3; 70/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 70/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time=  59.7s
+[CV 2/3; 70/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 70/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.142) total time= 1.0min
+[CV 3/3; 70/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 70/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time=  59.6s
+[CV 1/3; 71/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 71/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 1.9min
+[CV 2/3; 71/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 71/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.142) total time= 1.9min
+[CV 3/3; 71/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 71/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 2.0min
+[CV 1/3; 72/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 72/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 3.8min
+[CV 2/3; 72/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 72/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.142) total time= 3.7min
+[CV 3/3; 72/144] START gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 72/144] END gamma=5.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.951) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 3.9min
+[CV 1/3; 73/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 73/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.127, test=-0.139) total time=  37.4s
+[CV 2/3; 73/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 73/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.128, test=-0.138) total time=  37.5s
+[CV 3/3; 73/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 73/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.137) total time=  38.2s
+[CV 1/3; 74/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 74/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.127, test=-0.139) total time= 1.5min
+[CV 2/3; 74/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 74/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.128, test=-0.138) total time= 1.5min
+[CV 3/3; 74/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 74/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.137) total time= 1.5min
+[CV 1/3; 75/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 75/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.127, test=-0.139) total time= 2.9min
+[CV 2/3; 75/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 75/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.128, test=-0.138) total time= 2.9min
+[CV 3/3; 75/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 75/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.137) total time= 2.9min
+[CV 1/3; 76/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 76/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.127, test=-0.139) total time= 5.7min
+[CV 2/3; 76/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 76/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.956, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.128, test=-0.138) total time= 5.7min
+[CV 3/3; 76/144] START gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 76/144] END gamma=5.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.956, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.129, test=-0.137) total time= 5.9min
+[CV 1/3; 77/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 77/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time=  34.0s
+[CV 2/3; 77/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 77/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.140) total time=  34.0s
+[CV 3/3; 77/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 77/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.132, test=-0.138) total time=  34.2s
+[CV 1/3; 78/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 78/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time= 1.3min
+[CV 2/3; 78/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 78/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.140) total time= 1.3min
+[CV 3/3; 78/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 78/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.132, test=-0.138) total time= 1.3min
+[CV 1/3; 79/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 79/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time= 2.5min
+[CV 2/3; 79/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 79/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.140) total time= 2.5min
+[CV 3/3; 79/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 79/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.132, test=-0.138) total time= 2.5min
+[CV 1/3; 80/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 80/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.141) total time= 4.9min
+[CV 2/3; 80/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 80/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.133, test=-0.140) total time= 4.9min
+[CV 3/3; 80/144] START gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 80/144] END gamma=5.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.132, test=-0.138) total time= 5.0min
+[CV 1/3; 81/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 81/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time=  30.8s
+[CV 2/3; 81/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 81/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time=  31.5s
+[CV 3/3; 81/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 81/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time=  31.8s
+[CV 1/3; 82/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 82/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time= 1.2min
+[CV 2/3; 82/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 82/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time= 1.2min
+[CV 3/3; 82/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 82/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 1.2min
+[CV 1/3; 83/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 83/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time= 2.4min
+[CV 2/3; 83/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 83/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time= 2.4min
+[CV 3/3; 83/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 83/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 2.3min
+[CV 1/3; 84/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 84/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time= 4.7min
+[CV 2/3; 84/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 84/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.141) total time= 4.7min
+[CV 3/3; 84/144] START gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 84/144] END gamma=5.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 4.7min
+[CV 1/3; 85/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 85/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.958, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.123, test=-0.138) total time=  46.6s
+[CV 2/3; 85/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 85/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.957, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.137) total time=  45.7s
+[CV 3/3; 85/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 85/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.988) LogLoss: (train=-0.124, test=-0.135) total time=  46.9s
+[CV 1/3; 86/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 86/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.958, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.123, test=-0.138) total time= 1.9min
+[CV 2/3; 86/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 86/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.957, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.137) total time= 1.9min
+[CV 3/3; 86/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 86/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.988) LogLoss: (train=-0.124, test=-0.135) total time= 1.9min
+[CV 1/3; 87/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 87/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.958, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.123, test=-0.138) total time= 3.8min
+[CV 2/3; 87/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 87/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.957, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.137) total time= 3.8min
+[CV 3/3; 87/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 87/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.988) LogLoss: (train=-0.124, test=-0.135) total time= 3.8min
+[CV 1/3; 88/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 88/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.958, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.123, test=-0.138) total time= 7.5min
+[CV 2/3; 88/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 88/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.957, test=0.951) AUC: (train=0.990, test=0.987) LogLoss: (train=-0.125, test=-0.137) total time= 7.4min
+[CV 3/3; 88/144] START gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 88/144] END gamma=5.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.958, test=0.952) AUC: (train=0.990, test=0.988) LogLoss: (train=-0.124, test=-0.135) total time= 7.4min
+[CV 1/3; 89/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 89/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.140) total time=  40.0s
+[CV 2/3; 89/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 89/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time=  39.8s
+[CV 3/3; 89/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 89/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.138) total time=  41.1s
+[CV 1/3; 90/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 90/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.140) total time= 1.5min
+[CV 2/3; 90/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 90/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 1.5min
+[CV 3/3; 90/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 90/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.138) total time= 1.6min
+[CV 1/3; 91/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 91/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.140) total time= 3.0min
+[CV 2/3; 91/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 91/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 2.9min
+[CV 3/3; 91/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 91/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.138) total time= 3.0min
+[CV 1/3; 92/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 92/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.140) total time= 6.0min
+[CV 2/3; 92/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 92/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 5.7min
+[CV 3/3; 92/144] START gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 92/144] END gamma=5.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.138) total time= 5.8min
+[CV 1/3; 93/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 93/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time=  35.7s
+[CV 2/3; 93/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 93/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time=  35.9s
+[CV 3/3; 93/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 93/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.139) total time=  35.4s
+[CV 1/3; 94/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 94/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 1.4min
+[CV 2/3; 94/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 94/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time= 1.4min
+[CV 3/3; 94/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 94/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.139) total time= 1.4min
+[CV 1/3; 95/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 95/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 2.6min
+[CV 2/3; 95/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 95/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time= 2.7min
+[CV 3/3; 95/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 95/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.139) total time= 2.7min
+[CV 1/3; 96/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 96/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 5.1min
+[CV 2/3; 96/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 96/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time= 5.3min
+[CV 3/3; 96/144] START gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 96/144] END gamma=5.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.139) total time= 5.3min
+[CV 1/3; 97/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 97/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.146) total time=  23.4s
+[CV 2/3; 97/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 97/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time=  23.0s
+[CV 3/3; 97/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 97/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.143) total time=  23.3s
+[CV 1/3; 98/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 98/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.146) total time=  55.5s
+[CV 2/3; 98/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 98/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time=  56.8s
+[CV 3/3; 98/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 98/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.143) total time=  54.1s
+[CV 1/3; 99/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 99/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.146) total time= 1.8min
+[CV 2/3; 99/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 99/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time= 1.9min
+[CV 3/3; 99/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 99/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.143) total time= 1.8min
+[CV 1/3; 100/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 100/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.146) total time= 3.7min
+[CV 2/3; 100/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 100/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time= 3.7min
+[CV 3/3; 100/144] START gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 100/144] END gamma=10.0, max_depth=3, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.143) total time= 3.6min
+[CV 1/3; 101/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 101/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.147) total time=  22.5s
+[CV 2/3; 101/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 101/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time=  22.8s
+[CV 3/3; 101/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 101/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.144) total time=  22.6s
+[CV 1/3; 102/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 102/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.147) total time=  53.7s
+[CV 2/3; 102/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 102/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time=  51.1s
+[CV 3/3; 102/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 102/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.144) total time=  52.6s
+[CV 1/3; 103/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 103/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.147) total time= 1.8min
+[CV 2/3; 103/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 103/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time= 1.7min
+[CV 3/3; 103/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 103/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.144) total time= 1.7min
+[CV 1/3; 104/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 104/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.147) total time= 3.6min
+[CV 2/3; 104/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 104/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.141, test=-0.145) total time= 3.3min
+[CV 3/3; 104/144] START gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 104/144] END gamma=10.0, max_depth=3, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.144) total time= 3.4min
+[CV 1/3; 105/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 105/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.950, test=0.949) AUC: (train=0.987, test=0.985) LogLoss: (train=-0.142, test=-0.148) total time=  21.9s
+[CV 2/3; 105/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 105/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.951, test=0.949) AUC: (train=0.986, test=0.986) LogLoss: (train=-0.144, test=-0.147) total time=  21.5s
+[CV 3/3; 105/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 105/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=100; ACC: (train=0.951, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.145) total time=  21.6s
+[CV 1/3; 106/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 106/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.950, test=0.949) AUC: (train=0.987, test=0.985) LogLoss: (train=-0.142, test=-0.148) total time=  50.4s
+[CV 2/3; 106/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 106/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.951, test=0.949) AUC: (train=0.986, test=0.986) LogLoss: (train=-0.144, test=-0.147) total time=  51.7s
+[CV 3/3; 106/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 106/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.145) total time=  50.3s
+[CV 1/3; 107/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 107/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.950, test=0.949) AUC: (train=0.987, test=0.985) LogLoss: (train=-0.142, test=-0.148) total time= 1.7min
+[CV 2/3; 107/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 107/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.951, test=0.949) AUC: (train=0.986, test=0.986) LogLoss: (train=-0.144, test=-0.147) total time= 1.7min
+[CV 3/3; 107/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 107/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.145) total time= 1.7min
+[CV 1/3; 108/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 108/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.950, test=0.949) AUC: (train=0.987, test=0.985) LogLoss: (train=-0.142, test=-0.148) total time= 3.3min
+[CV 2/3; 108/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 108/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.951, test=0.949) AUC: (train=0.986, test=0.986) LogLoss: (train=-0.144, test=-0.147) total time= 3.4min
+[CV 3/3; 108/144] START gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 108/144] END gamma=10.0, max_depth=3, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.142, test=-0.145) total time= 3.4min
+[CV 1/3; 109/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 109/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time=  31.7s
+[CV 2/3; 109/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 109/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time=  32.1s
+[CV 3/3; 109/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 109/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time=  31.3s
+[CV 1/3; 110/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 110/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time= 1.3min
+[CV 2/3; 110/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 110/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time= 1.3min
+[CV 3/3; 110/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 110/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 1.3min
+[CV 1/3; 111/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 111/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time= 2.5min
+[CV 2/3; 111/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 111/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time= 2.5min
+[CV 3/3; 111/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 111/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 2.4min
+[CV 1/3; 112/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 112/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time= 4.9min
+[CV 2/3; 112/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 112/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.142) total time= 5.0min
+[CV 3/3; 112/144] START gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 112/144] END gamma=10.0, max_depth=4, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 4.8min
+[CV 1/3; 113/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 113/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.145) total time=  28.1s
+[CV 2/3; 113/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 113/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.144) total time=  28.6s
+[CV 3/3; 113/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 113/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time=  28.9s
+[CV 1/3; 114/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 114/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.145) total time= 1.1min
+[CV 2/3; 114/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 114/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.144) total time= 1.1min
+[CV 3/3; 114/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 114/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 1.1min
+[CV 1/3; 115/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 115/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.145) total time= 2.1min
+[CV 2/3; 115/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 115/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.144) total time= 2.3min
+[CV 3/3; 115/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 115/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 2.3min
+[CV 1/3; 116/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 116/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.145) total time= 4.1min
+[CV 2/3; 116/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 116/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.144) total time= 4.5min
+[CV 3/3; 116/144] START gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 116/144] END gamma=10.0, max_depth=4, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 4.5min
+[CV 1/3; 117/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 117/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.145) total time=  27.9s
+[CV 2/3; 117/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 117/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time=  27.1s
+[CV 3/3; 117/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 117/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time=  26.3s
+[CV 1/3; 118/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 118/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.145) total time= 1.1min
+[CV 2/3; 118/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 118/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time= 1.1min
+[CV 3/3; 118/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 118/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time= 1.0min
+[CV 1/3; 119/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 119/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.145) total time= 2.1min
+[CV 2/3; 119/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 119/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time= 2.1min
+[CV 3/3; 119/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 119/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time= 2.1min
+[CV 1/3; 120/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 120/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.145) total time= 4.2min
+[CV 2/3; 120/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 120/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.140, test=-0.144) total time= 4.3min
+[CV 3/3; 120/144] START gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 120/144] END gamma=10.0, max_depth=4, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time= 4.2min
+[CV 1/3; 121/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 121/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.134, test=-0.143) total time=  40.5s
+[CV 2/3; 121/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 121/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.141) total time=  39.1s
+[CV 3/3; 121/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 121/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=100; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time=  39.6s
+[CV 1/3; 122/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 122/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.134, test=-0.143) total time= 1.6min
+[CV 2/3; 122/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 122/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.141) total time= 1.6min
+[CV 3/3; 122/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 122/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=250; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time= 1.6min
+[CV 1/3; 123/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 123/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.134, test=-0.143) total time= 3.2min
+[CV 2/3; 123/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 123/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.141) total time= 3.2min
+[CV 3/3; 123/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 123/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=500; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time= 3.3min
+[CV 1/3; 124/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 124/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.134, test=-0.143) total time= 6.3min
+[CV 2/3; 124/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 124/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.141) total time= 6.1min
+[CV 3/3; 124/144] START gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 124/144] END gamma=10.0, max_depth=5, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.954, test=0.951) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.135, test=-0.140) total time= 6.5min
+[CV 1/3; 125/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 125/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time=  34.9s
+[CV 2/3; 125/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 125/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.143) total time=  34.9s
+[CV 3/3; 125/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 125/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time=  35.2s
+[CV 1/3; 126/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 126/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time= 1.4min
+[CV 2/3; 126/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 126/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.143) total time= 1.4min
+[CV 3/3; 126/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 126/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 1.4min
+[CV 1/3; 127/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 127/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time= 2.8min
+[CV 2/3; 127/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 127/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.143) total time= 2.8min
+[CV 3/3; 127/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 127/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 2.8min
+[CV 1/3; 128/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 128/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.136, test=-0.143) total time= 5.5min
+[CV 2/3; 128/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 128/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.137, test=-0.143) total time= 5.6min
+[CV 3/3; 128/144] START gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 128/144] END gamma=10.0, max_depth=5, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.137, test=-0.141) total time= 5.6min
+[CV 1/3; 129/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 129/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time=  31.5s
+[CV 2/3; 129/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 129/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time=  32.9s
+[CV 3/3; 129/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 129/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time=  32.2s
+[CV 1/3; 130/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 130/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 1.3min
+[CV 2/3; 130/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 130/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time= 1.3min
+[CV 3/3; 130/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 130/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 1.3min
+[CV 1/3; 131/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 131/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 2.5min
+[CV 2/3; 131/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 131/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time= 2.5min
+[CV 3/3; 131/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 131/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 2.4min
+[CV 1/3; 132/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 132/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.949) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 4.9min
+[CV 2/3; 132/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 132/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.143) total time= 4.9min
+[CV 3/3; 132/144] START gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 132/144] END gamma=10.0, max_depth=5, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.987, test=0.986) LogLoss: (train=-0.139, test=-0.142) total time= 4.8min
+[CV 1/3; 133/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 1/3; 133/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.956, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.131, test=-0.142) total time=  50.2s
+[CV 2/3; 133/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 2/3; 133/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time=  49.8s
+[CV 3/3; 133/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=100
+[CV 3/3; 133/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=100; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time=  49.5s
+[CV 1/3; 134/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 1/3; 134/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.956, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.131, test=-0.142) total time= 2.0min
+[CV 2/3; 134/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 2/3; 134/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time= 2.0min
+[CV 3/3; 134/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=250
+[CV 3/3; 134/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=250; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 2.1min
+[CV 1/3; 135/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 1/3; 135/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.956, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.131, test=-0.142) total time= 4.1min
+[CV 2/3; 135/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 2/3; 135/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time= 3.9min
+[CV 3/3; 135/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=500
+[CV 3/3; 135/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=500; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 4.0min
+[CV 1/3; 136/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 1/3; 136/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.956, test=0.950) AUC: (train=0.989, test=0.986) LogLoss: (train=-0.131, test=-0.142) total time= 8.0min
+[CV 2/3; 136/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 2/3; 136/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.132, test=-0.140) total time= 7.8min
+[CV 3/3; 136/144] START gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=1000
+[CV 3/3; 136/144] END gamma=10.0, max_depth=6, min_child_weight=1.0, n_estimators=1000; ACC: (train=0.955, test=0.951) AUC: (train=0.989, test=0.987) LogLoss: (train=-0.131, test=-0.139) total time= 8.1min
+[CV 1/3; 137/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 1/3; 137/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time=  40.0s
+[CV 2/3; 137/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 2/3; 137/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time=  39.6s
+[CV 3/3; 137/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=100
+[CV 3/3; 137/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=100; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time=  40.4s
+[CV 1/3; 138/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 1/3; 138/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 1.6min
+[CV 2/3; 138/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 2/3; 138/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time= 1.5min
+[CV 3/3; 138/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=250
+[CV 3/3; 138/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=250; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time= 1.6min
+[CV 1/3; 139/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 1/3; 139/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 3.1min
+[CV 2/3; 139/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 2/3; 139/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time= 2.9min
+[CV 3/3; 139/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=500
+[CV 3/3; 139/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=500; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time= 3.0min
+[CV 1/3; 140/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 1/3; 140/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.143) total time= 6.2min
+[CV 2/3; 140/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 2/3; 140/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.135, test=-0.142) total time= 5.8min
+[CV 3/3; 140/144] START gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=1000
+[CV 3/3; 140/144] END gamma=10.0, max_depth=6, min_child_weight=50.0, n_estimators=1000; ACC: (train=0.954, test=0.950) AUC: (train=0.988, test=0.987) LogLoss: (train=-0.134, test=-0.140) total time= 5.9min
+[CV 1/3; 141/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 1/3; 141/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time=  35.7s
+[CV 2/3; 141/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 2/3; 141/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.143) total time=  35.1s
+[CV 3/3; 141/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=100
+[CV 3/3; 141/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=100; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time=  35.1s
+[CV 1/3; 142/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 1/3; 142/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 1.4min
+[CV 2/3; 142/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 2/3; 142/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.143) total time= 1.4min
+[CV 3/3; 142/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=250
+[CV 3/3; 142/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=250; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 1.3min
+[CV 1/3; 143/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 1/3; 143/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 2.8min
+[CV 2/3; 143/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 2/3; 143/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.143) total time= 2.6min
+[CV 3/3; 143/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=500
+[CV 3/3; 143/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=500; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 2.6min
+[CV 1/3; 144/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 1/3; 144/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.144) total time= 5.4min
+[CV 2/3; 144/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 2/3; 144/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.952, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.143) total time= 5.2min
+[CV 3/3; 144/144] START gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=1000
+[CV 3/3; 144/144] END gamma=10.0, max_depth=6, min_child_weight=100.0, n_estimators=1000; ACC: (train=0.953, test=0.950) AUC: (train=0.988, test=0.986) LogLoss: (train=-0.138, test=-0.142) total time= 5.2min
+##### Tuning: all #####
+Model #16
+Scoring = 0.9852949310738429
+Mean AUC = 0.9867336711658988
+Diff AUC = 0.0014580835073317458
+Mean ACC = 0.95087339210215
+Mean LogLoss = -0.14061107412633836
+Mean fit time = 28.89646013577779
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #93
+Scoring = 0.9852799319375178
+Mean AUC = 0.9866935946677661
+Diff AUC = 0.0014327271788200963
+Mean ACC = 0.9506661600525118
+Mean LogLoss = -0.14063964220904498
+Mean fit time = 82.6420545578003
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #94
+Scoring = 0.9852799319375178
+Mean AUC = 0.9866935946677661
+Diff AUC = 0.0014327271788200963
+Mean ACC = 0.9506661600525118
+Mean LogLoss = -0.14063964449472852
+Mean fit time = 160.12704507509866
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #95
+Scoring = 0.9852799319375178
+Mean AUC = 0.9866935946677661
+Diff AUC = 0.0014327271788200963
+Mean ACC = 0.9506661600525118
+Mean LogLoss = -0.1406396450632068
+Mean fit time = 312.62081654866535
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #92
+Scoring = 0.9852799315519741
+Mean AUC = 0.9866935946677149
+Diff AUC = 0.0014327275695114067
+Mean ACC = 0.95067134134597
+Mean LogLoss = -0.14063679021696054
+Mean fit time = 34.77757922808329
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #32
+Scoring = 0.9852452161262102
+Mean AUC = 0.9866688889085161
+Diff AUC = 0.0014429083538661674
+Mean ACC = 0.9503127781077567
+Mean LogLoss = -0.14071560615145748
+Mean fit time = 31.716060241063435
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #9
+Scoring = 0.9852115780081699
+Mean AUC = 0.9865922490344837
+Diff AUC = 0.0013994342928042604
+Mean ACC = 0.9505169062270741
+Mean LogLoss = -0.14107099032296064
+Mean fit time = 48.65910712877909
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #69
+Scoring = 0.9852001264383733
+Mean AUC = 0.9863637911241584
+Diff AUC = 0.0011797520309001185
+Mean ACC = 0.9502278154098039
+Mean LogLoss = -0.14246469985130863
+Mean fit time = 59.10180950164795
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #70
+Scoring = 0.9852001264383733
+Mean AUC = 0.9863637911241584
+Diff AUC = 0.0011797520309001185
+Mean ACC = 0.9502278154098039
+Mean LogLoss = -0.1424647027652356
+Mean fit time = 114.82590715090434
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #71
+Scoring = 0.9852001264383733
+Mean AUC = 0.9863637911241584
+Diff AUC = 0.0011797520309001185
+Mean ACC = 0.9502278154098039
+Mean LogLoss = -0.14246470352571694
+Mean fit time = 226.42163292566934
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #68
+Scoring = 0.98519897216625
+Mean AUC = 0.9863568140063462
+Diff AUC = 0.0011738569893317212
+Mean ACC = 0.9502661575999326
+Mean LogLoss = -0.14252557957673856
+Mean fit time = 25.583379824956257
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #80
+Scoring = 0.9851793006376078
+Mean AUC = 0.9865197783196057
+Diff AUC = 0.0013587945335279323
+Mean ACC = 0.9503303819296249
+Mean LogLoss = -0.14150653493255055
+Mean fit time = 30.548881848653156
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #81
+Scoring = 0.9851792980632359
+Mean AUC = 0.98651977677331
+Diff AUC = 0.0013587955777820675
+Mean ACC = 0.9503303819296249
+Mean LogLoss = -0.14150906798672738
+Mean fit time = 72.34806783994038
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #82
+Scoring = 0.9851792980632359
+Mean AUC = 0.98651977677331
+Diff AUC = 0.0013587955777820675
+Mean ACC = 0.9503303819296249
+Mean LogLoss = -0.14150907047005826
+Mean fit time = 141.16163539886475
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #83
+Scoring = 0.9851792980632359
+Mean AUC = 0.98651977677331
+Diff AUC = 0.0013587955777820675
+Mean ACC = 0.9503303819296249
+Mean LogLoss = -0.14150907119242204
+Mean fit time = 281.0152280330658
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #21
+Scoring = 0.9851770808927258
+Mean AUC = 0.9869387247826062
+Diff AUC = 0.001784957713832203
+Mean ACC = 0.9514111898503629
+Mean LogLoss = -0.1388097598970919
+Mean fit time = 63.61388762791952
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #44
+Scoring = 0.9851744702911038
+Mean AUC = 0.986786875402368
+Diff AUC = 0.0016339952946847714
+Mean ACC = 0.9508951422988187
+Mean LogLoss = -0.13998607764232962
+Mean fit time = 35.72072307268778
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #20
+Scoring = 0.9851741169492174
+Mean AUC = 0.9864127232965618
+Diff AUC = 0.0012556674484135357
+Mean ACC = 0.9502578501095562
+Mean LogLoss = -0.142265861973738
+Mean fit time = 26.94513702392578
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #53
+Scoring = 0.9851463542409673
+Mean AUC = 0.9863099700215603
+Diff AUC = 0.0011797668237781222
+Mean ACC = 0.9503790923772755
+Mean LogLoss = -0.14300154705185142
+Mean fit time = 49.21594468752543
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #54
+Scoring = 0.985146354112409
+Mean AUC = 0.9863099700215603
+Diff AUC = 0.0011797669541206727
+Mean ACC = 0.9503790923772755
+Mean LogLoss = -0.14300155128015044
+Mean fit time = 97.50210467974345
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #55
+Scoring = 0.9851463530827272
+Mean AUC = 0.9863099695061113
+Diff AUC = 0.0011797674761075965
+Mean ACC = 0.9503790923772755
+Mean LogLoss = -0.1430015522618122
+Mean fit time = 196.43374943733215
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #57
+Scoring = 0.985141577029579
+Mean AUC = 0.9861770398911686
+Diff AUC = 0.0010499766468948179
+Mean ACC = 0.9498184799292293
+Mean LogLoss = -0.14388477364994545
+Mean fit time = 48.98754700024923
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #58
+Scoring = 0.985141577029579
+Mean AUC = 0.9861770398911686
+Diff AUC = 0.0010499766468948179
+Mean ACC = 0.9498184799292293
+Mean LogLoss = -0.14388477802742689
+Mean fit time = 95.41717767715454
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #59
+Scoring = 0.985141577029579
+Mean AUC = 0.9861770398911686
+Diff AUC = 0.0010499766468948179
+Mean ACC = 0.9498184799292293
+Mean LogLoss = -0.1438847788824974
+Mean fit time = 189.49461086591086
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #64
+Scoring = 0.9851402355369999
+Mean AUC = 0.986576007098634
+Diff AUC = 0.001455307600532891
+Mean ACC = 0.9505407531646967
+Mean LogLoss = -0.14116559380345559
+Mean fit time = 27.88297430674235
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #65
+Scoring = 0.9851402338652927
+Mean AUC = 0.9865760065832362
+Diff AUC = 0.001455308773336087
+Mean ACC = 0.9505407531646967
+Mean LogLoss = -0.1411728504971306
+Mean fit time = 65.68917067845662
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #66
+Scoring = 0.9851402338652927
+Mean AUC = 0.9865760065832362
+Diff AUC = 0.001455308773336087
+Mean ACC = 0.9505407531646967
+Mean LogLoss = -0.14117285336870578
+Mean fit time = 127.63687006632487
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #67
+Scoring = 0.9851402338652927
+Mean AUC = 0.9865760065832362
+Diff AUC = 0.001455308773336087
+Mean ACC = 0.9505407531646967
+Mean LogLoss = -0.14117285405483385
+Mean fit time = 251.8974556128184
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #76
+Scoring = 0.9851251853437394
+Mean AUC = 0.9868175900317667
+Diff AUC = 0.0017150126883863398
+Mean ACC = 0.9508868700615553
+Mean LogLoss = -0.1396674148485117
+Mean fit time = 33.25872826576233
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #78
+Scoring = 0.985125184569641
+Mean AUC = 0.9868175890008688
+Diff AUC = 0.0017150124299480155
+Mean ACC = 0.9508868700615553
+Mean LogLoss = -0.1396700764622759
+Mean fit time = 149.1775910059611
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #79
+Scoring = 0.985125184569641
+Mean AUC = 0.9868175890008688
+Diff AUC = 0.0017150124299480155
+Mean ACC = 0.9508868700615553
+Mean LogLoss = -0.13967007709146162
+Mean fit time = 292.8819747765859
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #77
+Scoring = 0.9851251844412269
+Mean AUC = 0.9868175890008688
+Diff AUC = 0.0017150125600775411
+Mean ACC = 0.9508868700615553
+Mean LogLoss = -0.1396700739125932
+Mean fit time = 75.31622838973999
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #5
+Scoring = 0.9851164009770653
+Mean AUC = 0.9868274358511316
+Diff AUC = 0.0017338744464380862
+Mean ACC = 0.9511023804308886
+Mean LogLoss = -0.1396524177671218
+Mean fit time = 53.23365227381388
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #89
+Scoring = 0.9851161177500475
+Mean AUC = 0.9869517382640525
+Diff AUC = 0.0018598888302620569
+Mean ACC = 0.950900332353577
+Mean LogLoss = -0.139089019468502
+Mean fit time = 91.30090284347534
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #90
+Scoring = 0.9851161177500475
+Mean AUC = 0.9869517382640525
+Diff AUC = 0.0018598888302620569
+Mean ACC = 0.950900332353577
+Mean LogLoss = -0.1390890215842987
+Mean fit time = 174.8335603872935
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #91
+Scoring = 0.9851161177500475
+Mean AUC = 0.9869517382640525
+Diff AUC = 0.0018598888302620569
+Mean ACC = 0.950900332353577
+Mean LogLoss = -0.1390890222337201
+Mean fit time = 348.2242064476013
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #88
+Scoring = 0.985116117236552
+Mean AUC = 0.9869517382640524
+Diff AUC = 0.0018598893505461435
+Mean ACC = 0.950900332353577
+Mean LogLoss = -0.13908831688547754
+Mean fit time = 39.507922410964966
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #108
+Scoring = 0.9850799825262078
+Mean AUC = 0.9864842403004846
+Diff AUC = 0.0014234974233841853
+Mean ACC = 0.9501169286170041
+Mean LogLoss = -0.14212584887762145
+Mean fit time = 31.065433104832966
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #109
+Scoring = 0.9850799823976096
+Mean AUC = 0.9864842403004334
+Diff AUC = 0.0014234975536922623
+Mean ACC = 0.9501169286170041
+Mean LogLoss = -0.14212729710875813
+Mean fit time = 75.37425700823466
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #110
+Scoring = 0.9850799823976096
+Mean AUC = 0.9864842403004334
+Diff AUC = 0.0014234975536922623
+Mean ACC = 0.9501169286170041
+Mean LogLoss = -0.142127299421736
+Mean fit time = 148.30485383669534
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #111
+Scoring = 0.9850799823976096
+Mean AUC = 0.9864842403004334
+Diff AUC = 0.0014234975536922623
+Mean ACC = 0.9501169286170041
+Mean LogLoss = -0.14212730008951222
+Mean fit time = 293.2986743450165
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #0
+Scoring = 0.9850693545280146
+Mean AUC = 0.9863728961507463
+Diff AUC = 0.0013215505290328992
+Mean ACC = 0.9497459368729054
+Mean LogLoss = -0.1431989873509908
+Mean fit time = 22.96384596824646
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #117
+Scoring = 0.9850631639685434
+Mean AUC = 0.9861238171284273
+Diff AUC = 0.0010755780779867993
+Mean ACC = 0.9500361026039436
+Mean LogLoss = -0.14411922750150372
+Mean fit time = 63.34527039527893
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #118
+Scoring = 0.9850631639685434
+Mean AUC = 0.9861238171284273
+Diff AUC = 0.0010755780779867993
+Mean ACC = 0.9500361026039436
+Mean LogLoss = -0.14411923004036598
+Mean fit time = 126.15073204040527
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #119
+Scoring = 0.9850631639685434
+Mean AUC = 0.9861238171284273
+Diff AUC = 0.0010755780779867993
+Mean ACC = 0.9500361026039436
+Mean LogLoss = -0.14411923078955394
+Mean fit time = 251.73127023379007
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #116
+Scoring = 0.9850631631970703
+Mean AUC = 0.9861238171284273
+Diff AUC = 0.0010755788603155174
+Mean ACC = 0.9500361026039436
+Mean LogLoss = -0.14411792295674072
+Mean fit time = 26.484075784683228
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #129
+Scoring = 0.9850442005619291
+Mean AUC = 0.9862351577819003
+Diff AUC = 0.0012075793593179847
+Mean ACC = 0.9500133109943597
+Mean LogLoss = -0.14332680025071556
+Mean fit time = 75.71667997042339
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #130
+Scoring = 0.9850442005619291
+Mean AUC = 0.9862351577819003
+Diff AUC = 0.0012075793593179847
+Mean ACC = 0.9500133109943597
+Mean LogLoss = -0.14332680241969054
+Mean fit time = 148.0946344534556
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #131
+Scoring = 0.9850442005619291
+Mean AUC = 0.9862351577819003
+Diff AUC = 0.0012075793593179847
+Mean ACC = 0.9500133109943597
+Mean LogLoss = -0.14332680317170185
+Mean fit time = 292.3780345916748
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #128
+Scoring = 0.9850441942554656
+Mean AUC = 0.9862351546892062
+Diff AUC = 0.0012075826217286647
+Mean ACC = 0.9500133109943597
+Mean LogLoss = -0.1433264268724933
+Mean fit time = 31.51809565226237
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #50
+Scoring = 0.9850436956816678
+Mean AUC = 0.9863933482903712
+Diff AUC = 0.0013682701845492478
+Mean ACC = 0.9498309042098994
+Mean LogLoss = -0.14275682912468982
+Mean fit time = 104.03614807128906
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #51
+Scoring = 0.9850436956816678
+Mean AUC = 0.9863933482903712
+Diff AUC = 0.0013682701845492478
+Mean ACC = 0.9498309042098994
+Mean LogLoss = -0.14275683002823347
+Mean fit time = 206.09471996625265
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #49
+Scoring = 0.9850436955531644
+Mean AUC = 0.9863933482903712
+Diff AUC = 0.0013682703148251935
+Mean ACC = 0.9498309042098994
+Mean LogLoss = -0.14275682541686593
+Mean fit time = 52.53550720214844
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #60
+Scoring = 0.9850348320322183
+Mean AUC = 0.9868547110453046
+Diff AUC = 0.0018441205100583336
+Mean ACC = 0.9504381755115768
+Mean LogLoss = -0.13973547433971192
+Mean fit time = 29.761041243871052
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #62
+Scoring = 0.9850348312598237
+Mean AUC = 0.9868547105297533
+Diff AUC = 0.0018441207712861986
+Mean ACC = 0.9504329942181187
+Mean LogLoss = -0.13974689684302202
+Mean fit time = 140.21851960817972
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #63
+Scoring = 0.9850348312598237
+Mean AUC = 0.9868547105297533
+Diff AUC = 0.0018441207712861986
+Mean ACC = 0.9504329942181187
+Mean LogLoss = -0.13974689747503297
+Mean fit time = 280.003217458725
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #61
+Scoring = 0.9850348311314363
+Mean AUC = 0.9868547105297533
+Diff AUC = 0.0018441209013837863
+Mean ACC = 0.9504329942181187
+Mean LogLoss = -0.13974689400626975
+Mean fit time = 71.50772738456726
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 5.0}
+-----
+Model #52
+Scoring = 0.9850337356556135
+Mean AUC = 0.9861182352894539
+Diff AUC = 0.0010997663312879342
+Mean ACC = 0.9498547438296124
+Mean LogLoss = -0.14428381557301276
+Mean fit time = 20.790669202804565
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #142
+Scoring = 0.9850249711162882
+Mean AUC = 0.9863044755795228
+Diff AUC = 0.001297271273642769
+Mean ACC = 0.9498961995370138
+Mean LogLoss = -0.14292401779718336
+Mean fit time = 159.41387375195822
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #143
+Scoring = 0.9850249709877664
+Mean AUC = 0.9863044755795228
+Diff AUC = 0.0012972714039492046
+Mean ACC = 0.9498961995370138
+Mean LogLoss = -0.14292401852613543
+Mean fit time = 313.4223129749298
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #141
+Scoring = 0.9850249709877601
+Mean AUC = 0.9863044755795228
+Diff AUC = 0.0012972714039556042
+Mean ACC = 0.9498961995370138
+Mean LogLoss = -0.14292401590727163
+Mean fit time = 81.26318613688152
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #140
+Scoring = 0.9850249689286322
+Mean AUC = 0.9863044745486248
+Diff AUC = 0.0012972724478190743
+Mean ACC = 0.9498961995370138
+Mean LogLoss = -0.1429237842177197
+Mean fit time = 34.645135720570885
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #28
+Scoring = 0.985024413086468
+Mean AUC = 0.9869662145810242
+Diff AUC = 0.0019674447472150494
+Mean ACC = 0.9509500787494499
+Mean LogLoss = -0.13880931037665598
+Mean fit time = 34.77446444829305
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #4
+Scoring = 0.9850103971617226
+Mean AUC = 0.9861247190417561
+Diff AUC = 0.0011300009608484452
+Mean ACC = 0.9498879030769795
+Mean LogLoss = -0.14428131664639668
+Mean fit time = 22.505560318628948
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #33
+Scoring = 0.9850010221526762
+Mean AUC = 0.987113687311603
+Diff AUC = 0.002140245025555822
+Mean ACC = 0.9512806347581165
+Mean LogLoss = -0.13760606297700986
+Mean fit time = 74.8601024945577
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #17
+Scoring = 0.9849924895592151
+Mean AUC = 0.9872456512989919
+Diff AUC = 0.0022822706150308967
+Mean ACC = 0.9517946141216495
+Mean LogLoss = -0.13707067329175748
+Mean fit time = 68.44369459152222
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #40
+Scoring = 0.9849832877509513
+Mean AUC = 0.9871705544407243
+Diff AUC = 0.002215692799925718
+Mean ACC = 0.9510785761672449
+Mean LogLoss = -0.13760979389241312
+Mean fit time = 40.1269211769104
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #48
+Scoring = 0.9849829547924414
+Mean AUC = 0.9862851793063868
+Diff AUC = 0.0013203326393500744
+Mean ACC = 0.9497490417318343
+Mean LogLoss = -0.14341871951196702
+Mean fit time = 22.97444987297058
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #112
+Scoring = 0.9849757834740768
+Mean AUC = 0.9862021965369414
+Diff AUC = 0.0012435716196650276
+Mean ACC = 0.9497656273339933
+Mean LogLoss = -0.14348125565963363
+Mean fit time = 27.922580083211262
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #114
+Scoring = 0.9849757784544295
+Mean AUC = 0.9862021939596449
+Diff AUC = 0.0012435740994362159
+Mean ACC = 0.9497656273339933
+Mean LogLoss = -0.1434820135893313
+Mean fit time = 131.72949123382568
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #113
+Scoring = 0.9849757783258939
+Mean AUC = 0.9862021939596449
+Diff AUC = 0.00124357422977018
+Mean ACC = 0.9497656273339933
+Mean LogLoss = -0.14348201121517554
+Mean fit time = 65.75711154937744
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #115
+Scoring = 0.9849757783258939
+Mean AUC = 0.9862021939596449
+Diff AUC = 0.00124357422977018
+Mean ACC = 0.9497656273339933
+Mean LogLoss = -0.14348201440110797
+Mean fit time = 259.862219731013
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 10.0}
+-----
+Model #56
+Scoring = 0.9849478597541261
+Mean AUC = 0.9859084821237384
+Diff AUC = 0.0009743524749304562
+Mean ACC = 0.949300352438636
+Mean LogLoss = -0.14568306745387372
+Mean fit time = 20.57776363690694
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 5.0}
+-----
+Model #10
+Scoring = 0.9849412482968921
+Mean AUC = 0.9868765995383327
+Diff AUC = 0.00196108737642172
+Mean ACC = 0.9511749171988679
+Mean LogLoss = -0.1389626680158858
+Mean fit time = 99.63720321655273
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #100
+Scoring = 0.9849173351976137
+Mean AUC = 0.9859356268474762
+Diff AUC = 0.00103281758173032
+Mean ACC = 0.9494101844181794
+Mean LogLoss = -0.14548858133372736
+Mean fit time = 21.95312770207723
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #101
+Scoring = 0.9849173328822987
+Mean AUC = 0.9859356263322323
+Diff AUC = 0.001032819408019362
+Mean ACC = 0.9494101844181794
+Mean LogLoss = -0.1454958999685159
+Mean fit time = 51.66059144337972
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #102
+Scoring = 0.9849173328822987
+Mean AUC = 0.9859356263322323
+Diff AUC = 0.001032819408019362
+Mean ACC = 0.9494101844181794
+Mean LogLoss = -0.1454959032471546
+Mean fit time = 102.85790133476257
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #103
+Scoring = 0.9849173328822987
+Mean AUC = 0.9859356263322323
+Diff AUC = 0.001032819408019362
+Mean ACC = 0.9494101844181794
+Mean LogLoss = -0.14549590422175637
+Mean fit time = 202.45714251200357
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #8
+Scoring = 0.9849134021935751
+Mean AUC = 0.9858899276239269
+Diff AUC = 0.0009905014778935322
+Mean ACC = 0.9492899932532833
+Mean LogLoss = -0.14570158559655125
+Mean fit time = 20.112257957458496
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #12
+Scoring = 0.9849131317168321
+Mean AUC = 0.9870494402470354
+Diff AUC = 0.0021643379177325684
+Mean ACC = 0.9508754704948522
+Mean LogLoss = -0.13893320204516166
+Mean fit time = 31.27842966715495
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #121
+Scoring = 0.9849061914401482
+Mean AUC = 0.9866521119562819
+Diff AUC = 0.0017695401398086944
+Mean ACC = 0.9505438680224033
+Mean LogLoss = -0.1412650619919587
+Mean fit time = 96.21886992454529
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #122
+Scoring = 0.9849061914401482
+Mean AUC = 0.9866521119562819
+Diff AUC = 0.0017695401398086944
+Mean ACC = 0.9505438680224033
+Mean LogLoss = -0.14126506386069274
+Mean fit time = 191.4759194056193
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #123
+Scoring = 0.9849061914401482
+Mean AUC = 0.9866521119562819
+Diff AUC = 0.0017695401398086944
+Mean ACC = 0.9505438680224033
+Mean LogLoss = -0.14126506458305443
+Mean fit time = 377.4021329879761
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #120
+Scoring = 0.9849061878375497
+Mean AUC = 0.986652109894537
+Diff AUC = 0.0017695417052054272
+Mean ACC = 0.9505438680224033
+Mean LogLoss = -0.1412648737725492
+Mean fit time = 39.1225434144338
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #97
+Scoring = 0.9848982369799962
+Mean AUC = 0.9860695269575386
+Diff AUC = 0.001187837110387409
+Mean ACC = 0.9493780535952121
+Mean LogLoss = -0.1446686463825473
+Mean fit time = 54.67894323666891
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #98
+Scoring = 0.9848982369799962
+Mean AUC = 0.9860695269575386
+Diff AUC = 0.001187837110387409
+Mean ACC = 0.9493780535952121
+Mean LogLoss = -0.1446686496564806
+Mean fit time = 108.23730325698853
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #99
+Scoring = 0.9848982369799962
+Mean AUC = 0.9860695269575386
+Diff AUC = 0.001187837110387409
+Mean ACC = 0.9493780535952121
+Mean LogLoss = -0.1446686505473164
+Mean fit time = 218.12253665924072
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #96
+Scoring = 0.9848982358217602
+Mean AUC = 0.9860695264420897
+Diff AUC = 0.0011878377628763612
+Mean ACC = 0.9493780535952121
+Mean LogLoss = -0.14466245784746215
+Mean fit time = 22.600561221440632
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #124
+Scoring = 0.9848896683482397
+Mean AUC = 0.9863819987121726
+Diff AUC = 0.0015129334942054586
+Mean ACC = 0.950102434910845
+Mean LogLoss = -0.14242917035372676
+Mean fit time = 34.40368175506592
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #125
+Scoring = 0.9848896657757874
+Mean AUC = 0.9863819976813257
+Diff AUC = 0.001512935058675337
+Mean ACC = 0.950102434910845
+Mean LogLoss = -0.1424293069341521
+Mean fit time = 83.94985779126485
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #126
+Scoring = 0.9848896657757874
+Mean AUC = 0.9863819976813257
+Diff AUC = 0.001512935058675337
+Mean ACC = 0.950102434910845
+Mean LogLoss = -0.1424293088061777
+Mean fit time = 166.33968925476074
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #127
+Scoring = 0.9848896657757874
+Mean AUC = 0.9863819976813257
+Diff AUC = 0.001512935058675337
+Mean ACC = 0.950102434910845
+Mean LogLoss = -0.14242930944430396
+Mean fit time = 333.0944222609202
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 10.0}
+-----
+Model #105
+Scoring = 0.9848588044018896
+Mean AUC = 0.9857656602174952
+Diff AUC = 0.0009199507065457751
+Mean ACC = 0.948886884189515
+Mean LogLoss = -0.14663095587290956
+Mean fit time = 50.016119400660195
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #106
+Scoring = 0.9848588044018896
+Mean AUC = 0.9857656602174952
+Diff AUC = 0.0009199507065457751
+Mean ACC = 0.948886884189515
+Mean LogLoss = -0.14663095926448985
+Mean fit time = 100.02591880162556
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #107
+Scoring = 0.9848588044018896
+Mean AUC = 0.9857656602174952
+Diff AUC = 0.0009199507065457751
+Mean ACC = 0.948886884189515
+Mean LogLoss = -0.14663096021885658
+Mean fit time = 200.19818075497946
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #104
+Scoring = 0.9848588018278415
+Mean AUC = 0.9857656591867512
+Diff AUC = 0.0009199522730969366
+Mean ACC = 0.948886884189515
+Mean LogLoss = -0.1466219536253112
+Mean fit time = 21.005086183547974
+Parameters = {'n_estimators': 100, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 10.0}
+-----
+Model #139
+Scoring = 0.9848283794685617
+Mean AUC = 0.986469523741153
+Diff AUC = 0.0016636543077046752
+Mean ACC = 0.950120029042805
+Mean LogLoss = -0.14169371215106516
+Mean fit time = 356.33037034670514
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #137
+Scoring = 0.9848283794685615
+Mean AUC = 0.986469523741153
+Diff AUC = 0.0016636543077048994
+Mean ACC = 0.950120029042805
+Mean LogLoss = -0.14169371103054892
+Mean fit time = 92.77156281471252
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #138
+Scoring = 0.9848283794685615
+Mean AUC = 0.986469523741153
+Diff AUC = 0.0016636543077048994
+Mean ACC = 0.950120029042805
+Mean LogLoss = -0.14169371186352334
+Mean fit time = 180.31088209152222
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #136
+Scoring = 0.9848283767678407
+Mean AUC = 0.9864695227101524
+Diff AUC = 0.0016636560020657758
+Mean ACC = 0.950120029042805
+Mean LogLoss = -0.14169357748638048
+Mean fit time = 39.349931955337524
+Parameters = {'n_estimators': 100, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #45
+Scoring = 0.9848066202951958
+Mean AUC = 0.9872111337584699
+Diff AUC = 0.0024356628294088813
+Mean ACC = 0.9517769873124884
+Mean LogLoss = -0.13686854370811916
+Mean fit time = 82.92863694826762
+Parameters = {'n_estimators': 250, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #133
+Scoring = 0.9847286859408954
+Mean AUC = 0.9867491205498004
+Diff AUC = 0.002047566667988775
+Mean ACC = 0.9506340222185049
+Mean LogLoss = -0.14017695496451746
+Mean fit time = 121.13213324546814
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #134
+Scoring = 0.9847286859408954
+Mean AUC = 0.9867491205498004
+Diff AUC = 0.002047566667988775
+Mean ACC = 0.9506340222185049
+Mean LogLoss = -0.1401769554732499
+Mean fit time = 238.64323496818542
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #135
+Scoring = 0.9847286859408954
+Mean AUC = 0.9867491205498004
+Diff AUC = 0.002047566667988775
+Mean ACC = 0.9506340222185049
+Mean LogLoss = -0.14017695566808355
+Mean fit time = 477.5842258135478
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #132
+Scoring = 0.9847286855559986
+Mean AUC = 0.9867491205498515
+Diff AUC = 0.0020475670581060522
+Mean ACC = 0.9506340222185049
+Mean LogLoss = -0.1401769646218711
+Mean fit time = 49.21443502108256
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 10.0}
+-----
+Model #1
+Scoring = 0.9847042423363043
+Mean AUC = 0.9869911770844371
+Diff AUC = 0.002317077195044793
+Mean ACC = 0.9508236526123605
+Mean LogLoss = -0.13873920653016494
+Mean fit time = 56.29300252596537
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #73
+Scoring = 0.9846966491887829
+Mean AUC = 0.9871126233277331
+Diff AUC = 0.002447516202158908
+Mean ACC = 0.9510081198530972
+Mean LogLoss = -0.13803380686016534
+Mean fit time = 89.03241237004598
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #74
+Scoring = 0.9846966491887829
+Mean AUC = 0.9871126233277331
+Diff AUC = 0.002447516202158908
+Mean ACC = 0.9510081198530972
+Mean LogLoss = -0.13803380950208752
+Mean fit time = 173.01909573872885
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #75
+Scoring = 0.9846966491887829
+Mean AUC = 0.9871126233277331
+Diff AUC = 0.002447516202158908
+Mean ACC = 0.9510081198530972
+Mean LogLoss = -0.13803381024751146
+Mean fit time = 345.1672830581665
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #72
+Scoring = 0.9846966479038346
+Mean AUC = 0.9871126228122327
+Diff AUC = 0.00244751698293051
+Mean ACC = 0.9510081198530972
+Mean LogLoss = -0.1380300317471971
+Mean fit time = 36.929214080174766
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 5.0}
+-----
+Model #6
+Scoring = 0.9846407964852971
+Mean AUC = 0.9871084572944976
+Diff AUC = 0.0024998882250122424
+Mean ACC = 0.951582161298225
+Mean LogLoss = -0.13744658333948626
+Mean fit time = 104.69431225458781
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #22
+Scoring = 0.9845878451223288
+Mean AUC = 0.9871200465926854
+Diff AUC = 0.0025652416634605567
+Mean ACC = 0.9520681742529734
+Mean LogLoss = -0.13708035678709513
+Mean fit time = 124.72880919774373
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #29
+Scoring = 0.9844306994758529
+Mean AUC = 0.9873358122581251
+Diff AUC = 0.0029423755790118945
+Mean ACC = 0.9518661162798407
+Mean LogLoss = -0.13594242629770456
+Mean fit time = 81.051442861557
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #84
+Scoring = 0.9842562083862048
+Mean AUC = 0.9871958513467206
+Diff AUC = 0.002977770780241468
+Mean ACC = 0.9511138228774838
+Mean LogLoss = -0.13672907689565586
+Mean fit time = 45.60928773880005
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #85
+Scoring = 0.9842562033753512
+Mean AUC = 0.9871958487695781
+Diff AUC = 0.002977773253291984
+Mean ACC = 0.9511138228774838
+Mean LogLoss = -0.13673070815901187
+Mean fit time = 112.67001589139302
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #86
+Scoring = 0.9842562033753512
+Mean AUC = 0.9871958487695781
+Diff AUC = 0.002977773253291984
+Mean ACC = 0.9511138228774838
+Mean LogLoss = -0.1367307105694009
+Mean fit time = 226.02436137199402
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #87
+Scoring = 0.9842562033753512
+Mean AUC = 0.9871958487695781
+Diff AUC = 0.002977773253291984
+Mean ACC = 0.9511138228774838
+Mean LogLoss = -0.13673071133647166
+Mean fit time = 443.3759410381317
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 5.0}
+-----
+Model #11
+Scoring = 0.9841978891398095
+Mean AUC = 0.9870021542538273
+Diff AUC = 0.0028411945221515893
+Mean ACC = 0.9515655943531874
+Mean LogLoss = -0.13750910596761678
+Mean fit time = 198.63843258221945
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #34
+Scoring = 0.9841714929382961
+Mean AUC = 0.9872129444236332
+Diff AUC = 0.003080846439987394
+Mean ACC = 0.9516060067924572
+Mean LogLoss = -0.13617518910060225
+Mean fit time = 145.34102400143942
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #18
+Scoring = 0.9841556678180278
+Mean AUC = 0.9873792318338978
+Diff AUC = 0.003264767894583595
+Mean ACC = 0.9518060255423467
+Mean LogLoss = -0.13545367754307117
+Mean fit time = 133.88773242632547
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #41
+Scoring = 0.9840593374983821
+Mean AUC = 0.9874274433580799
+Diff AUC = 0.003410990733904878
+Mean ACC = 0.9518039509630342
+Mean LogLoss = -0.13507652000985196
+Mean fit time = 93.70383540789287
+Parameters = {'n_estimators': 250, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #24
+Scoring = 0.9838515524304591
+Mean AUC = 0.9873031886912322
+Diff AUC = 0.0034960246257774857
+Mean ACC = 0.950870292189132
+Mean LogLoss = -0.13634823322097753
+Mean fit time = 39.23499162991842
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #46
+Scoring = 0.9837370488712979
+Mean AUC = 0.9872207400784743
+Diff AUC = 0.003528786486900074
+Mean ACC = 0.9517479897984361
+Mean LogLoss = -0.1355718557438914
+Mean fit time = 156.3064653078715
+Parameters = {'n_estimators': 500, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #7
+Scoring = 0.9837320829680238
+Mean AUC = 0.9871903202731426
+Diff AUC = 0.0035031110355314217
+Mean ACC = 0.9519231037047527
+Mean LogLoss = -0.13614421565959858
+Mean fit time = 204.26712687810263
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #2
+Scoring = 0.9834574089534183
+Mean AUC = 0.9871699460813755
+Diff AUC = 0.003760788243903036
+Mean ACC = 0.9512692443645395
+Mean LogLoss = -0.1364280591194416
+Mean fit time = 110.83108830451965
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #13
+Scoring = 0.9834357112695046
+Mean AUC = 0.9872995147987451
+Diff AUC = 0.003913506966554242
+Mean ACC = 0.9513158894060035
+Mean LogLoss = -0.1358437282611227
+Mean fit time = 74.79456734657288
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #23
+Scoring = 0.983423639845482
+Mean AUC = 0.9871107078483999
+Diff AUC = 0.003735212244789285
+Mean ACC = 0.9518857968451074
+Mean LogLoss = -0.13595546300251315
+Mean fit time = 244.22837034861246
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #30
+Scoring = 0.9832191272431436
+Mean AUC = 0.9873337129725871
+Diff AUC = 0.004167370844712357
+Mean ACC = 0.9517956504816979
+Mean LogLoss = -0.13463960949365508
+Mean fit time = 160.17625546455383
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #35
+Scoring = 0.9826884748482804
+Mean AUC = 0.9871273692701705
+Diff AUC = 0.004496779807829654
+Mean ACC = 0.9516681981872509
+Mean LogLoss = -0.13515618153142636
+Mean fit time = 284.40740807851154
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #19
+Scoring = 0.982620873575567
+Mean AUC = 0.9872739544358534
+Diff AUC = 0.004713059469846142
+Mean ACC = 0.951928299222204
+Mean LogLoss = -0.13453659250082275
+Mean fit time = 264.7017870744069
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #42
+Scoring = 0.982572310645373
+Mean AUC = 0.9873458232422118
+Diff AUC = 0.004834691639413284
+Mean ACC = 0.9520143115795895
+Mean LogLoss = -0.1340023139213998
+Mean fit time = 182.8501659234365
+Parameters = {'n_estimators': 500, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #36
+Scoring = 0.9823932438220717
+Mean AUC = 0.9873735268156342
+Diff AUC = 0.005043970552486123
+Mean ACC = 0.9513563045241419
+Mean LogLoss = -0.1341373233285932
+Mean fit time = 46.38045366605123
+Parameters = {'n_estimators': 100, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #47
+Scoring = 0.9820680046719954
+Mean AUC = 0.9870913266435416
+Diff AUC = 0.00508901439609167
+Mean ACC = 0.9514381652499467
+Mean LogLoss = -0.1346146712000078
+Mean fit time = 300.4925431410472
+Parameters = {'n_estimators': 1000, 'min_child_weight': 100.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #25
+Scoring = 0.9815655130093998
+Mean AUC = 0.9873350915380185
+Diff AUC = 0.005843587023359141
+Mean ACC = 0.9512153732387251
+Mean LogLoss = -0.1336025636620387
+Mean fit time = 94.0539189974467
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #3
+Scoring = 0.9814523335884845
+Mean AUC = 0.9870772966711118
+Diff AUC = 0.005698604457419159
+Mean ACC = 0.9514588782609156
+Mean LogLoss = -0.13518460054560932
+Mean fit time = 224.2240273952484
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 3, 'gamma': 0.0}
+-----
+Model #31
+Scoring = 0.9813988741522558
+Mean AUC = 0.9871425405369515
+Diff AUC = 0.005818477219684402
+Mean ACC = 0.9516878944199014
+Mean LogLoss = -0.13396281148032174
+Mean fit time = 311.2453861236572
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #14
+Scoring = 0.9813063113631656
+Mean AUC = 0.9873257087212789
+Diff AUC = 0.006096668308079604
+Mean ACC = 0.951557333247223
+Mean LogLoss = -0.13354749132281848
+Mean fit time = 148.4363161722819
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #43
+Scoring = 0.98046905944591
+Mean AUC = 0.9870900797361853
+Diff AUC = 0.006707615065936997
+Mean ACC = 0.951512772678893
+Mean LogLoss = -0.13332785911702982
+Mean fit time = 360.35160541534424
+Parameters = {'n_estimators': 1000, 'min_child_weight': 50.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #37
+Scoring = 0.9793987235575444
+Mean AUC = 0.9872726729809029
+Diff AUC = 0.00797545565561389
+Mean ACC = 0.9514444163013497
+Mean LogLoss = -0.1313963025643892
+Mean fit time = 115.10107453664143
+Parameters = {'n_estimators': 250, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #26
+Scoring = 0.9788728675927149
+Mean AUC = 0.9871826168823928
+Diff AUC = 0.008417641424765875
+Mean ACC = 0.9510071016293886
+Mean LogLoss = -0.1317648483050803
+Mean fit time = 184.68762834866843
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #15
+Scoring = 0.978229048089483
+Mean AUC = 0.9870325143017856
+Diff AUC = 0.008919124836054847
+Mean ACC = 0.9509625550811385
+Mean LogLoss = -0.1321561083760574
+Mean fit time = 295.6097791989644
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 4, 'gamma': 0.0}
+-----
+Model #38
+Scoring = 0.9764768383744691
+Mean AUC = 0.987012598110845
+Diff AUC = 0.010674392359876116
+Mean ACC = 0.9509221627403809
+Mean LogLoss = -0.12989415217023448
+Mean fit time = 224.49057412147522
+Parameters = {'n_estimators': 500, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+Model #27
+Scoring = 0.9754783469425661
+Mean AUC = 0.986753094153609
+Diff AUC = 0.011426107785062362
+Mean ACC = 0.9502827949402411
+Mean LogLoss = -0.13089025884004749
+Mean fit time = 367.52951153119403
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 5, 'gamma': 0.0}
+-----
+Model #39
+Scoring = 0.9738913318154381
+Mean AUC = 0.9866030616091557
+Diff AUC = 0.012884340509733219
+Mean ACC = 0.9493460631569596
+Mean LogLoss = -0.13108760787720808
+Mean fit time = 444.8419871330261
+Parameters = {'n_estimators': 1000, 'min_child_weight': 1.0, 'max_depth': 6, 'gamma': 0.0}
+-----
+[0]	validation_0-auc:0.972415	validation_0-error:0.070142	validation_0-logloss:0.618507	validation_1-auc:0.97301	validation_1-error:0.07007	validation_1-logloss:0.618402
+Multiple eval metrics have been passed: 'validation_1-logloss' will be used for early stopping.
+
+Will train until validation_1-logloss hasn't improved in 10 rounds.
+[1]	validation_0-auc:0.976442	validation_0-error:0.062981	validation_0-logloss:0.556737	validation_1-auc:0.976852	validation_1-error:0.062577	validation_1-logloss:0.556482
+[2]	validation_0-auc:0.977943	validation_0-error:0.06681	validation_0-logloss:0.505044	validation_1-auc:0.978301	validation_1-error:0.066059	validation_1-logloss:0.504717
+[3]	validation_0-auc:0.979386	validation_0-error:0.065633	validation_0-logloss:0.462289	validation_1-auc:0.979735	validation_1-error:0.065357	validation_1-logloss:0.461842
+[4]	validation_0-auc:0.980631	validation_0-error:0.064623	validation_0-logloss:0.424901	validation_1-auc:0.980846	validation_1-error:0.064046	validation_1-logloss:0.424454
+[5]	validation_0-auc:0.980751	validation_0-error:0.062681	validation_0-logloss:0.392698	validation_1-auc:0.980965	validation_1-error:0.062104	validation_1-logloss:0.392151
+[6]	validation_0-auc:0.981293	validation_0-error:0.061923	validation_0-logloss:0.365249	validation_1-auc:0.981438	validation_1-error:0.061385	validation_1-logloss:0.364631
+[7]	validation_0-auc:0.9815	validation_0-error:0.061741	validation_0-logloss:0.341067	validation_1-auc:0.981584	validation_1-error:0.060809	validation_1-logloss:0.340479
+[8]	validation_0-auc:0.981873	validation_0-error:0.060991	validation_0-logloss:0.319863	validation_1-auc:0.981877	validation_1-error:0.060469	validation_1-logloss:0.319225
+[9]	validation_0-auc:0.982151	validation_0-error:0.060959	validation_0-logloss:0.300965	validation_1-auc:0.982161	validation_1-error:0.060217	validation_1-logloss:0.300283
+[10]	validation_0-auc:0.982457	validation_0-error:0.060217	validation_0-logloss:0.284787	validation_1-auc:0.982398	validation_1-error:0.059404	validation_1-logloss:0.284133
+[11]	validation_0-auc:0.982599	validation_0-error:0.060186	validation_0-logloss:0.270322	validation_1-auc:0.9825	validation_1-error:0.059514	validation_1-logloss:0.269672
+[12]	validation_0-auc:0.982737	validation_0-error:0.060162	validation_0-logloss:0.257852	validation_1-auc:0.98264	validation_1-error:0.059498	validation_1-logloss:0.25721
+[13]	validation_0-auc:0.983089	validation_0-error:0.060194	validation_0-logloss:0.246304	validation_1-auc:0.982893	validation_1-error:0.059356	validation_1-logloss:0.24564
+[14]	validation_0-auc:0.983228	validation_0-error:0.059238	validation_0-logloss:0.236192	validation_1-auc:0.983102	validation_1-error:0.05829	validation_1-logloss:0.235513
+[15]	validation_0-auc:0.983582	validation_0-error:0.059601	validation_0-logloss:0.227188	validation_1-auc:0.983461	validation_1-error:0.058733	validation_1-logloss:0.226549
+[16]	validation_0-auc:0.983835	validation_0-error:0.058836	validation_0-logloss:0.218836	validation_1-auc:0.983765	validation_1-error:0.057896	validation_1-logloss:0.218187
+[17]	validation_0-auc:0.983927	validation_0-error:0.058891	validation_0-logloss:0.211844	validation_1-auc:0.983834	validation_1-error:0.057967	validation_1-logloss:0.211239
+[18]	validation_0-auc:0.984041	validation_0-error:0.058315	validation_0-logloss:0.205155	validation_1-auc:0.983968	validation_1-error:0.057382	validation_1-logloss:0.204529
+[19]	validation_0-auc:0.984209	validation_0-error:0.058528	validation_0-logloss:0.199512	validation_1-auc:0.98414	validation_1-error:0.05769	validation_1-logloss:0.198925
+[20]	validation_0-auc:0.98432	validation_0-error:0.057928	validation_0-logloss:0.194562	validation_1-auc:0.984254	validation_1-error:0.057075	validation_1-logloss:0.193943
+[21]	validation_0-auc:0.98447	validation_0-error:0.057438	validation_0-logloss:0.189792	validation_1-auc:0.984386	validation_1-error:0.056743	validation_1-logloss:0.189208
+[22]	validation_0-auc:0.984564	validation_0-error:0.057454	validation_0-logloss:0.185657	validation_1-auc:0.984474	validation_1-error:0.05668	validation_1-logloss:0.185103
+[23]	validation_0-auc:0.98464	validation_0-error:0.057328	validation_0-logloss:0.182044	validation_1-auc:0.984562	validation_1-error:0.056593	validation_1-logloss:0.181516
+[24]	validation_0-auc:0.98472	validation_0-error:0.057162	validation_0-logloss:0.178776	validation_1-auc:0.984633	validation_1-error:0.056506	validation_1-logloss:0.178301
+[25]	validation_0-auc:0.984838	validation_0-error:0.057059	validation_0-logloss:0.175774	validation_1-auc:0.984737	validation_1-error:0.056538	validation_1-logloss:0.175367
+[26]	validation_0-auc:0.98493	validation_0-error:0.056807	validation_0-logloss:0.172976	validation_1-auc:0.984814	validation_1-error:0.056214	validation_1-logloss:0.1726
+[27]	validation_0-auc:0.985074	validation_0-error:0.056514	validation_0-logloss:0.170591	validation_1-auc:0.984926	validation_1-error:0.056159	validation_1-logloss:0.17029
+[28]	validation_0-auc:0.985207	validation_0-error:0.056309	validation_0-logloss:0.168203	validation_1-auc:0.985064	validation_1-error:0.05589	validation_1-logloss:0.167873
+[29]	validation_0-auc:0.985311	validation_0-error:0.056159	validation_0-logloss:0.166141	validation_1-auc:0.98516	validation_1-error:0.055614	validation_1-logloss:0.165836
+[30]	validation_0-auc:0.985447	validation_0-error:0.055985	validation_0-logloss:0.164126	validation_1-auc:0.985291	validation_1-error:0.055661	validation_1-logloss:0.163826
+[31]	validation_0-auc:0.985544	validation_0-error:0.055772	validation_0-logloss:0.162501	validation_1-auc:0.985358	validation_1-error:0.055464	validation_1-logloss:0.162256
+[32]	validation_0-auc:0.985616	validation_0-error:0.055606	validation_0-logloss:0.160991	validation_1-auc:0.98542	validation_1-error:0.055535	validation_1-logloss:0.160796
+[33]	validation_0-auc:0.985736	validation_0-error:0.055535	validation_0-logloss:0.159479	validation_1-auc:0.985481	validation_1-error:0.055298	validation_1-logloss:0.159391
+[34]	validation_0-auc:0.98583	validation_0-error:0.055204	validation_0-logloss:0.15807	validation_1-auc:0.985563	validation_1-error:0.054959	validation_1-logloss:0.158032
+[35]	validation_0-auc:0.985934	validation_0-error:0.055172	validation_0-logloss:0.156686	validation_1-auc:0.985678	validation_1-error:0.054982	validation_1-logloss:0.156619
+[36]	validation_0-auc:0.98604	validation_0-error:0.05462	validation_0-logloss:0.155323	validation_1-auc:0.985809	validation_1-error:0.054516	validation_1-logloss:0.155261
+[37]	validation_0-auc:0.986154	validation_0-error:0.054359	validation_0-logloss:0.153883	validation_1-auc:0.9859	validation_1-error:0.054059	validation_1-logloss:0.153911
+[38]	validation_0-auc:0.98623	validation_0-error:0.054154	validation_0-logloss:0.15289	validation_1-auc:0.985953	validation_1-error:0.054011	validation_1-logloss:0.152969
+[39]	validation_0-auc:0.986303	validation_0-error:0.053917	validation_0-logloss:0.151868	validation_1-auc:0.986008	validation_1-error:0.053853	validation_1-logloss:0.152033
+[40]	validation_0-auc:0.986398	validation_0-error:0.053704	validation_0-logloss:0.150766	validation_1-auc:0.986085	validation_1-error:0.053624	validation_1-logloss:0.151013
+[41]	validation_0-auc:0.986473	validation_0-error:0.053601	validation_0-logloss:0.149866	validation_1-auc:0.986142	validation_1-error:0.053459	validation_1-logloss:0.150176
+[42]	validation_0-auc:0.986526	validation_0-error:0.053491	validation_0-logloss:0.149238	validation_1-auc:0.986183	validation_1-error:0.053332	validation_1-logloss:0.149585
+[43]	validation_0-auc:0.986622	validation_0-error:0.053333	validation_0-logloss:0.148261	validation_1-auc:0.986266	validation_1-error:0.053166	validation_1-logloss:0.148661
+[44]	validation_0-auc:0.986672	validation_0-error:0.053088	validation_0-logloss:0.147535	validation_1-auc:0.986307	validation_1-error:0.052953	validation_1-logloss:0.14798
+[45]	validation_0-auc:0.986728	validation_0-error:0.053033	validation_0-logloss:0.14695	validation_1-auc:0.98635	validation_1-error:0.052772	validation_1-logloss:0.147421
+[46]	validation_0-auc:0.986788	validation_0-error:0.052827	validation_0-logloss:0.14632	validation_1-auc:0.986407	validation_1-error:0.05274	validation_1-logloss:0.146821
+[47]	validation_0-auc:0.986845	validation_0-error:0.052709	validation_0-logloss:0.145751	validation_1-auc:0.986455	validation_1-error:0.052622	validation_1-logloss:0.146293
+[48]	validation_0-auc:0.986897	validation_0-error:0.052504	validation_0-logloss:0.14508	validation_1-auc:0.986508	validation_1-error:0.052393	validation_1-logloss:0.145654
+[49]	validation_0-auc:0.986936	validation_0-error:0.052377	validation_0-logloss:0.1446	validation_1-auc:0.986546	validation_1-error:0.052227	validation_1-logloss:0.145163
+[50]	validation_0-auc:0.98697	validation_0-error:0.052283	validation_0-logloss:0.144161	validation_1-auc:0.986568	validation_1-error:0.052124	validation_1-logloss:0.144774
+[51]	validation_0-auc:0.987012	validation_0-error:0.052322	validation_0-logloss:0.143738	validation_1-auc:0.986602	validation_1-error:0.052077	validation_1-logloss:0.144385
+[52]	validation_0-auc:0.987067	validation_0-error:0.052243	validation_0-logloss:0.143276	validation_1-auc:0.986646	validation_1-error:0.051927	validation_1-logloss:0.143987
+[53]	validation_0-auc:0.987121	validation_0-error:0.051967	validation_0-logloss:0.142705	validation_1-auc:0.986701	validation_1-error:0.051801	validation_1-logloss:0.143448
+[54]	validation_0-auc:0.987154	validation_0-error:0.051856	validation_0-logloss:0.142387	validation_1-auc:0.986727	validation_1-error:0.051714	validation_1-logloss:0.143169
+[55]	validation_0-auc:0.987181	validation_0-error:0.051667	validation_0-logloss:0.142008	validation_1-auc:0.986742	validation_1-error:0.05169	validation_1-logloss:0.142824
+[56]	validation_0-auc:0.987227	validation_0-error:0.051682	validation_0-logloss:0.14161	validation_1-auc:0.986789	validation_1-error:0.051595	validation_1-logloss:0.142448
+[57]	validation_0-auc:0.987274	validation_0-error:0.051477	validation_0-logloss:0.141192	validation_1-auc:0.98683	validation_1-error:0.051327	validation_1-logloss:0.142073
+[58]	validation_0-auc:0.987309	validation_0-error:0.051311	validation_0-logloss:0.140878	validation_1-auc:0.986854	validation_1-error:0.051177	validation_1-logloss:0.141799
+[59]	validation_0-auc:0.987337	validation_0-error:0.051264	validation_0-logloss:0.140636	validation_1-auc:0.986877	validation_1-error:0.051122	validation_1-logloss:0.141584
+[60]	validation_0-auc:0.98736	validation_0-error:0.051114	validation_0-logloss:0.140365	validation_1-auc:0.986894	validation_1-error:0.051003	validation_1-logloss:0.141337
+[61]	validation_0-auc:0.987387	validation_0-error:0.050996	validation_0-logloss:0.140147	validation_1-auc:0.98692	validation_1-error:0.050869	validation_1-logloss:0.141122
+[62]	validation_0-auc:0.987408	validation_0-error:0.050996	validation_0-logloss:0.139938	validation_1-auc:0.98694	validation_1-error:0.050837	validation_1-logloss:0.140925
+[63]	validation_0-auc:0.987427	validation_0-error:0.050877	validation_0-logloss:0.139729	validation_1-auc:0.986943	validation_1-error:0.050806	validation_1-logloss:0.140776
+[64]	validation_0-auc:0.98746	validation_0-error:0.05083	validation_0-logloss:0.139475	validation_1-auc:0.986977	validation_1-error:0.050711	validation_1-logloss:0.140525
+[65]	validation_0-auc:0.98749	validation_0-error:0.050751	validation_0-logloss:0.139242	validation_1-auc:0.987004	validation_1-error:0.050577	validation_1-logloss:0.140322
+[66]	validation_0-auc:0.987513	validation_0-error:0.050711	validation_0-logloss:0.139059	validation_1-auc:0.98702	validation_1-error:0.050498	validation_1-logloss:0.140153
+[67]	validation_0-auc:0.987537	validation_0-error:0.050656	validation_0-logloss:0.138854	validation_1-auc:0.987032	validation_1-error:0.050458	validation_1-logloss:0.13999
+[68]	validation_0-auc:0.987559	validation_0-error:0.050672	validation_0-logloss:0.13865	validation_1-auc:0.987054	validation_1-error:0.050435	validation_1-logloss:0.139827
+[69]	validation_0-auc:0.987593	validation_0-error:0.050553	validation_0-logloss:0.138338	validation_1-auc:0.987079	validation_1-error:0.050269	validation_1-logloss:0.139558
+[70]	validation_0-auc:0.987615	validation_0-error:0.050451	validation_0-logloss:0.138168	validation_1-auc:0.987098	validation_1-error:0.05019	validation_1-logloss:0.139422
+[71]	validation_0-auc:0.98763	validation_0-error:0.050435	validation_0-logloss:0.138068	validation_1-auc:0.987109	validation_1-error:0.050143	validation_1-logloss:0.139348
+[72]	validation_0-auc:0.987657	validation_0-error:0.050356	validation_0-logloss:0.137876	validation_1-auc:0.987135	validation_1-error:0.050095	validation_1-logloss:0.13917
+[73]	validation_0-auc:0.987677	validation_0-error:0.050324	validation_0-logloss:0.137742	validation_1-auc:0.987146	validation_1-error:0.050048	validation_1-logloss:0.139067
+[74]	validation_0-auc:0.987701	validation_0-error:0.050222	validation_0-logloss:0.137621	validation_1-auc:0.98717	validation_1-error:0.050056	validation_1-logloss:0.138958
+[75]	validation_0-auc:0.987714	validation_0-error:0.050174	validation_0-logloss:0.13752	validation_1-auc:0.987177	validation_1-error:0.050032	validation_1-logloss:0.138892
+[76]	validation_0-auc:0.987724	validation_0-error:0.050119	validation_0-logloss:0.137392	validation_1-auc:0.987186	validation_1-error:0.050024	validation_1-logloss:0.138771
+[77]	validation_0-auc:0.98775	validation_0-error:0.050096	validation_0-logloss:0.137227	validation_1-auc:0.987212	validation_1-error:0.049937	validation_1-logloss:0.13862
+[78]	validation_0-auc:0.987766	validation_0-error:0.049993	validation_0-logloss:0.13711	validation_1-auc:0.987224	validation_1-error:0.049866	validation_1-logloss:0.138528
+[79]	validation_0-auc:0.987782	validation_0-error:0.049882	validation_0-logloss:0.136986	validation_1-auc:0.987232	validation_1-error:0.049827	validation_1-logloss:0.138429
+[80]	validation_0-auc:0.987788	validation_0-error:0.049914	validation_0-logloss:0.136939	validation_1-auc:0.987239	validation_1-error:0.049835	validation_1-logloss:0.13839
+[81]	validation_0-auc:0.987802	validation_0-error:0.049882	validation_0-logloss:0.136841	validation_1-auc:0.987246	validation_1-error:0.049803	validation_1-logloss:0.138319
+[82]	validation_0-auc:0.987814	validation_0-error:0.049819	validation_0-logloss:0.136739	validation_1-auc:0.987256	validation_1-error:0.04974	validation_1-logloss:0.138233
+[83]	validation_0-auc:0.987826	validation_0-error:0.049724	validation_0-logloss:0.136671	validation_1-auc:0.987262	validation_1-error:0.049708	validation_1-logloss:0.13819
+[84]	validation_0-auc:0.987839	validation_0-error:0.049669	validation_0-logloss:0.136568	validation_1-auc:0.987272	validation_1-error:0.049614	validation_1-logloss:0.138095
+[85]	validation_0-auc:0.987848	validation_0-error:0.049717	validation_0-logloss:0.136474	validation_1-auc:0.987275	validation_1-error:0.049527	validation_1-logloss:0.138035
+[86]	validation_0-auc:0.98786	validation_0-error:0.049638	validation_0-logloss:0.136422	validation_1-auc:0.987285	validation_1-error:0.049535	validation_1-logloss:0.138
+[87]	validation_0-auc:0.98788	validation_0-error:0.049535	validation_0-logloss:0.136302	validation_1-auc:0.9873	validation_1-error:0.049503	validation_1-logloss:0.137912
+[88]	validation_0-auc:0.987885	validation_0-error:0.049559	validation_0-logloss:0.136264	validation_1-auc:0.987303	validation_1-error:0.049519	validation_1-logloss:0.137886
+[89]	validation_0-auc:0.987905	validation_0-error:0.049535	validation_0-logloss:0.136137	validation_1-auc:0.987308	validation_1-error:0.049479	validation_1-logloss:0.137826
+[90]	validation_0-auc:0.987916	validation_0-error:0.049551	validation_0-logloss:0.136077	validation_1-auc:0.987315	validation_1-error:0.049511	validation_1-logloss:0.137785
+[91]	validation_0-auc:0.987921	validation_0-error:0.04948	validation_0-logloss:0.135994	validation_1-auc:0.98732	validation_1-error:0.049566	validation_1-logloss:0.137706
+[92]	validation_0-auc:0.987938	validation_0-error:0.049385	validation_0-logloss:0.135919	validation_1-auc:0.98733	validation_1-error:0.049621	validation_1-logloss:0.13766
+[93]	validation_0-auc:0.987959	validation_0-error:0.04933	validation_0-logloss:0.135807	validation_1-auc:0.987346	validation_1-error:0.04955	validation_1-logloss:0.137562
+[94]	validation_0-auc:0.987974	validation_0-error:0.04929	validation_0-logloss:0.135701	validation_1-auc:0.987361	validation_1-error:0.049424	validation_1-logloss:0.137461
+[95]	validation_0-auc:0.987987	validation_0-error:0.049172	validation_0-logloss:0.135595	validation_1-auc:0.987369	validation_1-error:0.049416	validation_1-logloss:0.137385
+[96]	validation_0-auc:0.988001	validation_0-error:0.049148	validation_0-logloss:0.135495	validation_1-auc:0.987378	validation_1-error:0.049408	validation_1-logloss:0.137319
+[97]	validation_0-auc:0.988044	validation_0-error:0.049117	validation_0-logloss:0.135327	validation_1-auc:0.987416	validation_1-error:0.049353	validation_1-logloss:0.137171
+[98]	validation_0-auc:0.988047	validation_0-error:0.04914	validation_0-logloss:0.135298	validation_1-auc:0.987418	validation_1-error:0.049329	validation_1-logloss:0.13715
+[99]	validation_0-auc:0.98806	validation_0-error:0.049109	validation_0-logloss:0.135221	validation_1-auc:0.987422	validation_1-error:0.049369	validation_1-logloss:0.137116
+Test ..

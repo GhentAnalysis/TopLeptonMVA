@@ -1,0 +1,12 @@
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost
+mkdir build
+cd build
+cmake ..
+make -j8
+
+<use name="xgboost"/>
+../../config/toolbox/slc7_amd64_gcc820/tools/selected/
+scram setup rabit
+scram setup xgboost
+cmsenv

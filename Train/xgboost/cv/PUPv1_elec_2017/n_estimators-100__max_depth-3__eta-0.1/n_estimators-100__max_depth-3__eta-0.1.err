@@ -1,0 +1,2 @@
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/model_selection/_search.py:296: UserWarning: The total space of parameters 144 is smaller than n_iter=1000. Running 144 iterations. For exhaustive searches, use GridSearchCV.
+  UserWarning,

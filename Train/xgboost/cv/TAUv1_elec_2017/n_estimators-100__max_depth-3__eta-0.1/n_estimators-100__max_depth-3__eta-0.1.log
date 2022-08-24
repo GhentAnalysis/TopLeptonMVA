@@ -1,0 +1,45 @@
+000 (3505020.000.000) 2022-01-15 17:31:24 Job submitted from host: <192.168.10.37:9618?addrs=192.168.10.37-9618&alias=schedd01.wn.iihe.ac.be&noUDP&sock=schedd_155913_ed9d>
+...
+001 (3505020.000.000) 2022-01-15 17:31:44 Job executing on host: <192.168.50.11:9618?addrs=192.168.50.11-9618&alias=node50-11.wn.iihe.ac.be&noUDP&sock=startd_2206_b603>
+...
+006 (3505020.000.000) 2022-01-15 17:31:52 Image size of job updated: 191096
+	187  -  MemoryUsage of job (MB)
+	191096  -  ResidentSetSize of job (KB)
+...
+006 (3505020.000.000) 2022-01-15 17:36:52 Image size of job updated: 849724
+	830  -  MemoryUsage of job (MB)
+	849724  -  ResidentSetSize of job (KB)
+...
+006 (3505020.000.000) 2022-01-15 17:41:53 Image size of job updated: 849744
+	830  -  MemoryUsage of job (MB)
+	849744  -  ResidentSetSize of job (KB)
+...
+006 (3505020.000.000) 2022-01-15 17:46:54 Image size of job updated: 849752
+	830  -  MemoryUsage of job (MB)
+	849752  -  ResidentSetSize of job (KB)
+...
+006 (3505020.000.000) 2022-01-15 17:51:54 Image size of job updated: 849756
+	830  -  MemoryUsage of job (MB)
+	849756  -  ResidentSetSize of job (KB)
+...
+006 (3505020.000.000) 2022-01-15 17:56:54 Image size of job updated: 859048
+	839  -  MemoryUsage of job (MB)
+	859048  -  ResidentSetSize of job (KB)
+...
+005 (3505020.000.000) 2022-01-16 10:34:29 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 16:57:52, Sys 0 00:00:52  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 16:57:52, Sys 0 00:00:52  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :     2           2    855400 
+	   Memory (MB)          :   839           1       100 
+
+	Job terminated of its own accord at 2022-01-16T09:34:29Z.
+...

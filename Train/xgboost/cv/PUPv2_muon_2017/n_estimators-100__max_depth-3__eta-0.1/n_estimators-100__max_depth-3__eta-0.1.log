@@ -1,0 +1,45 @@
+000 (3505011.000.000) 2022-01-15 17:31:20 Job submitted from host: <192.168.10.37:9618?addrs=192.168.10.37-9618&alias=schedd01.wn.iihe.ac.be&noUDP&sock=schedd_155913_ed9d>
+...
+001 (3505011.000.000) 2022-01-15 17:31:22 Job executing on host: <192.168.22.12:9618?addrs=192.168.22.12-9618&alias=node22-12.wn.iihe.ac.be&noUDP&sock=startd_2384_cdde>
+...
+006 (3505011.000.000) 2022-01-15 17:31:30 Image size of job updated: 142596
+	140  -  MemoryUsage of job (MB)
+	142596  -  ResidentSetSize of job (KB)
+...
+006 (3505011.000.000) 2022-01-15 17:36:30 Image size of job updated: 761180
+	744  -  MemoryUsage of job (MB)
+	761180  -  ResidentSetSize of job (KB)
+...
+006 (3505011.000.000) 2022-01-15 17:41:32 Image size of job updated: 761192
+	744  -  MemoryUsage of job (MB)
+	761192  -  ResidentSetSize of job (KB)
+...
+006 (3505011.000.000) 2022-01-15 17:56:34 Image size of job updated: 761376
+	744  -  MemoryUsage of job (MB)
+	761376  -  ResidentSetSize of job (KB)
+...
+006 (3505011.000.000) 2022-01-15 18:01:34 Image size of job updated: 761392
+	744  -  MemoryUsage of job (MB)
+	761392  -  ResidentSetSize of job (KB)
+...
+006 (3505011.000.000) 2022-01-16 08:03:03 Image size of job updated: 776652
+	759  -  MemoryUsage of job (MB)
+	776652  -  ResidentSetSize of job (KB)
+...
+005 (3505011.000.000) 2022-01-16 08:03:23 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 14:26:53, Sys 0 00:01:27  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 14:26:53, Sys 0 00:01:27  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            :     2           2    388551 
+	   Memory (MB)          :   759           1       100 
+
+	Job terminated of its own accord at 2022-01-16T07:03:23Z.
+...

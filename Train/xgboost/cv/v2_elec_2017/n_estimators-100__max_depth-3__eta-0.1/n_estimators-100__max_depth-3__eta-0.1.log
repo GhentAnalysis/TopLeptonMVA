@@ -1,0 +1,30 @@
+000 (3505017.000.000) 2022-01-15 17:31:23 Job submitted from host: <192.168.10.37:9618?addrs=192.168.10.37-9618&alias=schedd01.wn.iihe.ac.be&noUDP&sock=schedd_155913_ed9d>
+...
+001 (3505017.000.000) 2022-01-15 17:31:43 Job executing on host: <192.168.26.9:9618?addrs=192.168.26.9-9618&alias=node26-9.wn.iihe.ac.be&noUDP&sock=startd_2557_77c1>
+...
+006 (3505017.000.000) 2022-01-15 17:31:52 Image size of job updated: 198720
+	195  -  MemoryUsage of job (MB)
+	198720  -  ResidentSetSize of job (KB)
+...
+006 (3505017.000.000) 2022-01-15 17:36:53 Image size of job updated: 951912
+	930  -  MemoryUsage of job (MB)
+	951912  -  ResidentSetSize of job (KB)
+...
+006 (3505017.000.000) 2022-01-15 17:41:53 Image size of job updated: 975608
+	953  -  MemoryUsage of job (MB)
+	975608  -  ResidentSetSize of job (KB)
+...
+004 (3505017.000.000) 2022-01-16 13:18:56 Job was evicted.
+	(0) CPU times
+		Usr 0 19:41:56, Sys 0 00:01:10  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            :     2           2    854134 
+	   Memory (MB)          :   953           1       100 
+...
+009 (3505017.000.000) 2022-01-16 13:18:56 Job was aborted.
+	via condor_rm (by user kskovpen)
+...

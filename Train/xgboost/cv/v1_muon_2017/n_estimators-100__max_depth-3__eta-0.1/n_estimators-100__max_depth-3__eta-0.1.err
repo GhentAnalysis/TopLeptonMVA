@@ -1,0 +1,76 @@
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/model_selection/_search.py:296: UserWarning: The total space of parameters 144 is smaller than n_iter=1000. Running 144 iterations. For exhaustive searches, use GridSearchCV.
+  UserWarning,
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: divide by zero encountered in log
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/metrics/_classification.py:2442: RuntimeWarning: invalid value encountered in multiply
+  loss = -(transformed_labels * np.log(y_pred)).sum(axis=1)
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/model_selection/_search.py:972: UserWarning: One or more of the test scores are non-finite: [-0.12521342 -0.11556131 -0.10637029 -0.09542419 -0.13215925 -0.12631374
+ -0.12225058 -0.11793848 -0.13913008 -0.13577439 -0.1339936  -0.13187213
+ -0.11881725 -0.10643211 -0.09461511         nan -0.13049139 -0.1250408
+ -0.1206124  -0.11590449 -0.13870682 -0.13538474 -0.1335404  -0.13169737
+ -0.1112086  -0.0971918  -0.08643804         nan -0.12980822 -0.12448021
+ -0.12010709 -0.11557483 -0.13869047 -0.13562865 -0.13370927 -0.131759
+ -0.10376588 -0.08956246 -0.07950657         nan -0.12975839 -0.1243097
+ -0.12015684 -0.11558403 -0.13869047 -0.13562865 -0.13370927 -0.131759
+ -0.13004305 -0.13005349 -0.1300535  -0.1300535  -0.13563949 -0.13564352
+ -0.13564353 -0.13564353 -0.14078694 -0.14078854 -0.14078855 -0.14078855
+ -0.127991   -0.12799324 -0.12799324 -0.12799324 -0.13482997 -0.13483134
+ -0.13483134 -0.13483135 -0.14081409 -0.14081496 -0.14081497 -0.14081497
+ -0.12634142 -0.12634207 -0.12634207 -0.12634207 -0.13421844 -0.13421913
+ -0.13421913 -0.13421913 -0.14072079 -0.14072196 -0.14072197 -0.14072197
+ -0.12508268 -0.12508282 -0.12508282 -0.12508282 -0.1339203  -0.13392143
+ -0.13392144 -0.13392144 -0.14072079 -0.14072196 -0.14072197 -0.14072197
+ -0.13580623 -0.13580729 -0.13580729 -0.13580729 -0.13885831 -0.13885962
+ -0.13885962 -0.13885962 -0.14280627 -0.14280681 -0.14280681 -0.14280681
+ -0.13446633 -0.13446692 -0.13446692 -0.13446692 -0.1382244  -0.13822512
+ -0.13822513 -0.13822513 -0.14292026 -0.14292072 -0.14292072 -0.14292072
+ -0.13339826 -0.13339837 -0.13339838 -0.13339838 -0.13803285 -0.13803342
+ -0.13803343 -0.13803343 -0.14294544 -0.1429458  -0.14294581 -0.14294581
+ -0.13349843 -0.13349859 -0.13349859 -0.13349859 -0.13771953 -0.13772028
+ -0.13772028 -0.13772028 -0.14294544 -0.1429458  -0.14294581 -0.14294581]
+  category=UserWarning,
+/user/kskovpen/.local/lib/python3.7/site-packages/sklearn/model_selection/_search.py:972: UserWarning: One or more of the train scores are non-finite: [-0.12081555 -0.107512   -0.09295738 -0.07356829 -0.12927059 -0.12193961
+ -0.1162314  -0.10931912 -0.13725962 -0.13321761 -0.13080336 -0.12777723
+ -0.11162039 -0.09321351 -0.07297155         nan -0.12686643 -0.11980052
+ -0.11352763 -0.10583965 -0.13683331 -0.13288258 -0.13048163 -0.12767548
+ -0.10022278 -0.07789773 -0.0567844          nan -0.12607279 -0.11903703
+ -0.11281    -0.10533595 -0.13679651 -0.1330892  -0.13062464 -0.12771313
+ -0.08805869 -0.06418591 -0.04200554         nan -0.12583911 -0.118764
+ -0.11272367 -0.10530299 -0.13679651 -0.1330892  -0.13062464 -0.12771313
+ -0.12656755 -0.12657791 -0.12657792 -0.12657792 -0.13308588 -0.13308994
+ -0.13308994 -0.13308994 -0.1389953  -0.1389969  -0.1389969  -0.1389969
+ -0.12357439 -0.12357665 -0.12357665 -0.12357665 -0.13203096 -0.13203232
+ -0.13203233 -0.13203233 -0.13905105 -0.13905192 -0.13905192 -0.13905193
+ -0.12090669 -0.12090735 -0.12090735 -0.12090735 -0.13138741 -0.1313881
+ -0.13138811 -0.13138811 -0.13885994 -0.13886111 -0.13886112 -0.13886112
+ -0.11858166 -0.11858181 -0.11858181 -0.11858181 -0.13111027 -0.13111139
+ -0.1311114  -0.1311114  -0.13885994 -0.13886111 -0.13886112 -0.13886112
+ -0.13304245 -0.13304351 -0.13304352 -0.13304352 -0.13676075 -0.13676205
+ -0.13676205 -0.13676205 -0.14112954 -0.14113009 -0.14113009 -0.14113009
+ -0.13092484 -0.13092541 -0.13092542 -0.13092542 -0.1358591  -0.13585982
+ -0.13585982 -0.13585982 -0.14117815 -0.14117861 -0.14117861 -0.14117861
+ -0.12942143 -0.12942154 -0.12942155 -0.12942155 -0.13543666 -0.13543724
+ -0.13543724 -0.13543724 -0.14122079 -0.14122116 -0.14122116 -0.14122116
+ -0.12939909 -0.12939925 -0.12939925 -0.12939925 -0.13508681 -0.13508756
+ -0.13508756 -0.13508756 -0.14122079 -0.14122116 -0.14122116 -0.14122116]
+  category=UserWarning,
